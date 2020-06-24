@@ -24,6 +24,7 @@ Partial Class EntregaBolsaSolidaria
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnEntregar = New System.Windows.Forms.Button()
         Me.cmbTipoDeBolsa = New System.Windows.Forms.ComboBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
@@ -53,7 +54,6 @@ Partial Class EntregaBolsaSolidaria
         Me.txtContador = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -82,6 +82,16 @@ Partial Class EntregaBolsaSolidaria
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Generales"
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(214, 407)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(150, 44)
+        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnEntregar
         '
@@ -349,21 +359,11 @@ Partial Class EntregaBolsaSolidaria
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(1555, 535)
+        Me.Label13.Location = New System.Drawing.Point(1569, 538)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(219, 25)
         Me.Label13.TabIndex = 3
         Me.Label13.Text = "Canastas Entregadas"
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Location = New System.Drawing.Point(214, 407)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(6)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(150, 44)
-        Me.btnLimpiar.TabIndex = 15
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'EntregaBolsaSolidaria
         '
