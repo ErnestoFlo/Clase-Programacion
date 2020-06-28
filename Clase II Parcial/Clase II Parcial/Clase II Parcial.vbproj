@@ -85,6 +85,42 @@
     <Compile Include="Clase\LibretaDeAhorro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proyecto\Informacion.Designer.vb">
+      <DependentUpon>Informacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Informacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Registro.Designer.vb">
+      <DependentUpon>Registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Telefono.Designer.vb">
+      <DependentUpon>Telefono.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Telefono.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\MainPage.Designer.vb">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\MainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\PantallaDeCarga.Designer.vb">
+      <DependentUpon>PantallaDeCarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\PantallaDeCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tareas\EntregaBolsaSolidaria.Designer.vb">
       <DependentUpon>EntregaBolsaSolidaria.vb</DependentUpon>
     </Compile>
@@ -120,6 +156,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clase\LibretaDeAhorro.resx">
       <DependentUpon>LibretaDeAhorro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Informacion.resx">
+      <DependentUpon>Informacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Registro.resx">
+      <DependentUpon>Registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Telefono.resx">
+      <DependentUpon>Telefono.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\MainPage.resx">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\PantallaDeCarga.resx">
+      <DependentUpon>PantallaDeCarga.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tareas\EntregaBolsaSolidaria.resx">
       <DependentUpon>EntregaBolsaSolidaria.vb</DependentUpon>
@@ -170,6 +224,32 @@
   <ItemGroup>
     <None Include="Resources\clientes.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\LOGO EMPRESA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\519c190ba4e93ebf48ed57a87a6d7a52.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suave-nublado-es-degradado-colores-pastel-fondo-abstracto-cielo-color-dulce_6529-729.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleados1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pallet %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21nkbhpXM+L._AC_SY400_.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

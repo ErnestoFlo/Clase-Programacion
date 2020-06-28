@@ -1,7 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 
-Public Class MenuPersonalizado
-
+Public Class MainPage
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -35,40 +34,13 @@ Public Class MenuPersonalizado
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles PanelForms.Paint
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
 
-    End Sub
-
-    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
-        If PanelLateral.Width = 165 Then
-            TimerOcultarMenu.Enabled = True
-        ElseIf PanelLateral.Width = 45 Then
-            TimerMostrar.Enabled = True
+        If MsgBox("Desea salir de la aplicacion?", vbQuestion + vbYesNo, "Salir") = vbYes Then
+            End
         End If
     End Sub
 
-    Private Sub TimerOcultarMenu_Tick(sender As Object, e As EventArgs) Handles TimerOcultarMenu.Tick
-        If PanelLateral.Width <= 45 Then
-            Me.TimerOcultarMenu.Enabled = False
-        Else
-            Me.PanelLateral.Width = PanelLateral.Width - 20
-        End If
-    End Sub
 
-    Private Sub TimerMostrar_Tick(sender As Object, e As EventArgs) Handles TimerMostrar.Tick
-        If PanelLateral.Width >= 165 Then
-            Me.TimerMostrar.Enabled = False
-        Else
-            Me.PanelLateral.Width = PanelLateral.Width + 20
-        End If
-    End Sub
 
-    Private Sub PanelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles PanelSuperior.Paint
-
-    End Sub
-
-    Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
-
-    End Sub
-End Class
 
