@@ -41,6 +41,9 @@ Public Class MainPage
         End If
     End Sub
 
+    Private Sub btnAsignacionTelefonos_Click(sender As Object, e As EventArgs) Handles btnAsignacionTelefonos.Click
+
+    End Sub
 
 
 

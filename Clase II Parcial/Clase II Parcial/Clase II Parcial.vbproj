@@ -85,6 +85,12 @@
     <Compile Include="Clase\LibretaDeAhorro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proyecto\EMPLEADOS.Designer.vb">
+      <DependentUpon>EMPLEADOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\EMPLEADOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Proyecto\Informacion.Designer.vb">
       <DependentUpon>Informacion.vb</DependentUpon>
     </Compile>
@@ -101,6 +107,12 @@
       <DependentUpon>Registro.vb</DependentUpon>
     </Compile>
     <Compile Include="Proyecto\Registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proyecto\Stock.Designer.vb">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\Stock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proyecto\Telefono.Designer.vb">
@@ -157,6 +169,9 @@
     <EmbeddedResource Include="Clase\LibretaDeAhorro.resx">
       <DependentUpon>LibretaDeAhorro.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\EMPLEADOS.resx">
+      <DependentUpon>EMPLEADOS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Informacion.resx">
       <DependentUpon>Informacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proyecto\Stock.resx">
+      <DependentUpon>Stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\Telefono.resx">
       <DependentUpon>Telefono.vb</DependentUpon>
