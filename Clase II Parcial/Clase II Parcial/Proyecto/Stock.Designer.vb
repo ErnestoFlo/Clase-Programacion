@@ -23,18 +23,18 @@ Partial Class Stock
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtPack3 = New System.Windows.Forms.TextBox()
+        Me.txtPack2 = New System.Windows.Forms.TextBox()
+        Me.txtPack1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DGCelulares = New System.Windows.Forms.DataGridView()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ddd = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Puest = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Paquete = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtPack1 = New System.Windows.Forms.TextBox()
-        Me.txtPack2 = New System.Windows.Forms.TextBox()
-        Me.txtPack3 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGCelulares, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,6 +56,54 @@ Partial Class Stock
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Telefonos Registrados"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 257)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(101, 21)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Inventario Pack 3"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 223)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(101, 21)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Inventario Pack 2"
+        '
+        'txtPack3
+        '
+        Me.txtPack3.Location = New System.Drawing.Point(113, 254)
+        Me.txtPack3.Name = "txtPack3"
+        Me.txtPack3.Size = New System.Drawing.Size(62, 28)
+        Me.txtPack3.TabIndex = 7
+        '
+        'txtPack2
+        '
+        Me.txtPack2.Location = New System.Drawing.Point(113, 220)
+        Me.txtPack2.Name = "txtPack2"
+        Me.txtPack2.Size = New System.Drawing.Size(62, 28)
+        Me.txtPack2.TabIndex = 6
+        '
+        'txtPack1
+        '
+        Me.txtPack1.Location = New System.Drawing.Point(113, 186)
+        Me.txtPack1.Name = "txtPack1"
+        Me.txtPack1.Size = New System.Drawing.Size(62, 28)
+        Me.txtPack1.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 189)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 21)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Inventario Pack 1"
         '
         'DGCelulares
         '
@@ -91,58 +139,11 @@ Partial Class Stock
         Me.Estado.HeaderText = "Estado"
         Me.Estado.Name = "Estado"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 189)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 21)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Inventario Pack 1"
-        '
-        'txtPack1
-        '
-        Me.txtPack1.Location = New System.Drawing.Point(113, 186)
-        Me.txtPack1.Name = "txtPack1"
-        Me.txtPack1.Size = New System.Drawing.Size(62, 28)
-        Me.txtPack1.TabIndex = 5
-        '
-        'txtPack2
-        '
-        Me.txtPack2.Location = New System.Drawing.Point(113, 220)
-        Me.txtPack2.Name = "txtPack2"
-        Me.txtPack2.Size = New System.Drawing.Size(62, 28)
-        Me.txtPack2.TabIndex = 6
-        '
-        'txtPack3
-        '
-        Me.txtPack3.Location = New System.Drawing.Point(113, 254)
-        Me.txtPack3.Name = "txtPack3"
-        Me.txtPack3.Size = New System.Drawing.Size(62, 28)
-        Me.txtPack3.TabIndex = 7
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 223)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 21)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Inventario Pack 2"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 257)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 21)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Inventario Pack 3"
-        '
         'Stock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(600, 324)
         Me.Controls.Add(Me.GroupBox1)

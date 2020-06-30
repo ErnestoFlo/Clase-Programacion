@@ -63,6 +63,8 @@ Partial Class Telefono
         '
         'btnBuscar
         '
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnBuscar.Location = New System.Drawing.Point(98, 70)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 35)
@@ -127,6 +129,8 @@ Partial Class Telefono
         '
         'btnEntregar
         '
+        Me.btnEntregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnEntregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnEntregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEntregar.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEntregar.Location = New System.Drawing.Point(46, 140)
@@ -140,6 +144,7 @@ Partial Class Telefono
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(847, 273)
         Me.Controls.Add(Me.btnEntregar)

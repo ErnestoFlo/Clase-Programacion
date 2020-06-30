@@ -37,13 +37,13 @@ Partial Class EMPLEADOS
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cmbDepto = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtIdentidad = New System.Windows.Forms.MaskedTextBox()
         Me.chkM = New System.Windows.Forms.CheckBox()
         Me.chkF = New System.Windows.Forms.CheckBox()
         Me.cmbPuesto = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtDireccion = New System.Windows.Forms.TextBox()
+        Me.txtBarrio = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -126,13 +126,13 @@ Partial Class EMPLEADOS
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.cmbDepto)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtIdentidad)
         Me.GroupBox1.Controls.Add(Me.chkM)
         Me.GroupBox1.Controls.Add(Me.chkF)
         Me.GroupBox1.Controls.Add(Me.cmbPuesto)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.txtDireccion)
+        Me.GroupBox1.Controls.Add(Me.txtBarrio)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -179,7 +179,7 @@ Partial Class EMPLEADOS
         'cmbDepto
         '
         Me.cmbDepto.FormattingEnabled = True
-        Me.cmbDepto.Items.AddRange(New Object() {"Atlantida", "Colón", "Comayagua", "Copán ", "Cortés", "Choluteca", "El Paraiso", "Francisco Morazan", "Gracias aDios", "Intibuca", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro"})
+        Me.cmbDepto.Items.AddRange(New Object() {"Atlantida", "Colón", "Comayagua", "Copán ", "Cortés", "Choluteca", "El Paraiso", "Francisco Morazan", "Gracias aDios", "Intibuca", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho ", "Santa Bárbara", "Valle", "Yoro"})
         Me.cmbDepto.Location = New System.Drawing.Point(97, 58)
         Me.cmbDepto.Name = "cmbDepto"
         Me.cmbDepto.Size = New System.Drawing.Size(100, 29)
@@ -194,13 +194,13 @@ Partial Class EMPLEADOS
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Departamento"
         '
-        'MaskedTextBox1
+        'txtIdentidad
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(97, 24)
-        Me.MaskedTextBox1.Mask = "9999-9999-99999"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 28)
-        Me.MaskedTextBox1.TabIndex = 31
+        Me.txtIdentidad.Location = New System.Drawing.Point(97, 24)
+        Me.txtIdentidad.Mask = "9999-9999-99999"
+        Me.txtIdentidad.Name = "txtIdentidad"
+        Me.txtIdentidad.Size = New System.Drawing.Size(100, 28)
+        Me.txtIdentidad.TabIndex = 31
         '
         'chkM
         '
@@ -249,12 +249,12 @@ Partial Class EMPLEADOS
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "Puesto"
         '
-        'txtDireccion
+        'txtBarrio
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(97, 128)
-        Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(100, 28)
-        Me.txtDireccion.TabIndex = 25
+        Me.txtBarrio.Location = New System.Drawing.Point(97, 128)
+        Me.txtBarrio.Name = "txtBarrio"
+        Me.txtBarrio.Size = New System.Drawing.Size(100, 28)
+        Me.txtBarrio.TabIndex = 25
         '
         'Label4
         '
@@ -316,6 +316,7 @@ Partial Class EMPLEADOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1027, 434)
         Me.Controls.Add(Me.GroupBox2)
@@ -347,13 +348,13 @@ Partial Class EMPLEADOS
     Friend WithEvents Label9 As Label
     Friend WithEvents cmbDepto As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents txtIdentidad As MaskedTextBox
     Friend WithEvents chkM As CheckBox
     Friend WithEvents chkF As CheckBox
     Friend WithEvents cmbPuesto As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents txtDireccion As TextBox
+    Friend WithEvents txtBarrio As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label3 As Label

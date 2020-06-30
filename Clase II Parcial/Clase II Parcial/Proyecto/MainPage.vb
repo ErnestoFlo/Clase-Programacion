@@ -1,6 +1,23 @@
 ﻿Imports System.Runtime.InteropServices
 
 Public Class MainPage
+    Private Sub AbrirFormulario(frmHijo As Object)
+
+        If (panelCentral.Controls.Count > 0) Then
+            panelCentral.Controls.RemoveAt(0)
+        Else
+            Dim frm As Form
+            frm = frmHijo
+            frm.TopLevel = False
+            frm.Dock = DockStyle.Fill
+            panelCentral.Controls.Add(frm)
+            panelCentral.Tag = frm
+            frm.Show()
+        End If
+
+    End Sub
+
+
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -42,8 +59,26 @@ Public Class MainPage
     End Sub
 
     Private Sub btnAsignacionTelefonos_Click(sender As Object, e As EventArgs) Handles btnAsignacionTelefonos.Click
+        AbrirFormulario(New Telefono)
+    End Sub
+
+    Private Sub panelCentral_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
+
+    Private Sub btnEmpleados_Click(sender As Object, e As EventArgs) Handles btnEmpleados.Click
+        AbrirFormulario(New EMPLEADOS)
+    End Sub
+
+    Private Sub btnStock_Click(sender As Object, e As EventArgs) Handles btnStock.Click
+        AbrirFormulario(New Stock)
+    End Sub
+
+    Private Sub PanelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles PanelSuperior.Paint
+
+    End Sub
+End Class
+
 
 
 

@@ -37,7 +37,7 @@ Partial Class MainPage
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnAsignacionTelefonos = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.panelCentral = New System.Windows.Forms.Panel()
         Me.PanelSuperior.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class MainPage
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
         Me.PanelSuperior.Name = "PanelSuperior"
-        Me.PanelSuperior.Size = New System.Drawing.Size(800, 32)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1223, 32)
         Me.PanelSuperior.TabIndex = 1
         '
         'btnRestaurar
@@ -65,7 +65,7 @@ Partial Class MainPage
         Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRestaurar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Restaurar
-        Me.btnRestaurar.Location = New System.Drawing.Point(734, 0)
+        Me.btnRestaurar.Location = New System.Drawing.Point(1157, 0)
         Me.btnRestaurar.Name = "btnRestaurar"
         Me.btnRestaurar.Size = New System.Drawing.Size(30, 33)
         Me.btnRestaurar.TabIndex = 2
@@ -80,7 +80,7 @@ Partial Class MainPage
         Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMinimizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Minimizar
-        Me.btnMinimizar.Location = New System.Drawing.Point(698, 0)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1121, 0)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(30, 33)
         Me.btnMinimizar.TabIndex = 2
@@ -95,7 +95,7 @@ Partial Class MainPage
         Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMaximizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Maximizar
-        Me.btnMaximizar.Location = New System.Drawing.Point(734, 0)
+        Me.btnMaximizar.Location = New System.Drawing.Point(1157, 0)
         Me.btnMaximizar.Name = "btnMaximizar"
         Me.btnMaximizar.Size = New System.Drawing.Size(30, 33)
         Me.btnMaximizar.TabIndex = 1
@@ -110,7 +110,7 @@ Partial Class MainPage
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_cerrar_FN
-        Me.btnCerrar.Location = New System.Drawing.Point(770, 0)
+        Me.btnCerrar.Location = New System.Drawing.Point(1193, 0)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(30, 33)
         Me.btnCerrar.TabIndex = 0
@@ -132,7 +132,7 @@ Partial Class MainPage
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(180, 418)
+        Me.Panel1.Size = New System.Drawing.Size(180, 454)
         Me.Panel1.TabIndex = 2
         '
         'Panel6
@@ -249,22 +249,22 @@ Partial Class MainPage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Panel2
+        'panelCentral
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.Window
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(180, 32)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(620, 418)
-        Me.Panel2.TabIndex = 3
+        Me.panelCentral.BackColor = System.Drawing.SystemColors.Window
+        Me.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelCentral.Location = New System.Drawing.Point(180, 32)
+        Me.panelCentral.Name = "panelCentral"
+        Me.panelCentral.Size = New System.Drawing.Size(1043, 454)
+        Me.panelCentral.TabIndex = 8
         '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Panel2)
+        Me.ClientSize = New System.Drawing.Size(1223, 486)
+        Me.Controls.Add(Me.panelCentral)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -283,7 +283,6 @@ Partial Class MainPage
     Friend WithEvents btnMaximizar As Button
     Friend WithEvents btnCerrar As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnAsignacionTelefonos As Button
@@ -293,4 +292,5 @@ Partial Class MainPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents btnSalir As Button
+    Friend WithEvents panelCentral As Panel
 End Class
