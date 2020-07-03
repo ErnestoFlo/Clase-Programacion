@@ -45,7 +45,7 @@ Partial Class MainPage
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.BackColor = System.Drawing.Color.Aqua
+        Me.PanelSuperior.BackColor = System.Drawing.Color.Black
         Me.PanelSuperior.Controls.Add(Me.btnRestaurar)
         Me.PanelSuperior.Controls.Add(Me.btnMinimizar)
         Me.PanelSuperior.Controls.Add(Me.btnMaximizar)
@@ -118,7 +118,7 @@ Partial Class MainPage
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.Panel1.BackColor = System.Drawing.Color.NavajoWhite
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.btnSalir)
@@ -257,7 +257,7 @@ Partial Class MainPage
         Me.panelCentral.Location = New System.Drawing.Point(180, 32)
         Me.panelCentral.Name = "panelCentral"
         Me.panelCentral.Size = New System.Drawing.Size(1043, 454)
-        Me.panelCentral.TabIndex = 8
+        Me.panelCentral.TabIndex = 9
         '
         'MainPage
         '
@@ -269,6 +269,7 @@ Partial Class MainPage
         Me.Controls.Add(Me.PanelSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainPage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainPage"
         Me.PanelSuperior.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

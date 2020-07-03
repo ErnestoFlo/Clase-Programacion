@@ -85,6 +85,13 @@
     <Compile Include="Clase\LibretaDeAhorro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CompuCenterDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompuCenterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.vb" />
+    <Compile Include="ConexionCrud.vb" />
     <Compile Include="Proyecto\EMPLEADOS.Designer.vb">
       <DependentUpon>EMPLEADOS.vb</DependentUpon>
     </Compile>
@@ -207,6 +214,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="CompuCenterDataSet.xsc">
+      <DependentUpon>CompuCenterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompuCenterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompuCenterDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompuCenterDataSet.xss">
+      <DependentUpon>CompuCenterDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -23,23 +23,21 @@ Partial Class EMPLEADOS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtcantidad = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.DGListado = New System.Windows.Forms.DataGridView()
-        Me.Identidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Puesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sexo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnSolicitar = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbSexo = New System.Windows.Forms.ComboBox()
+        Me.txtPrueba = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtEdad = New System.Windows.Forms.MaskedTextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.cmbmunicipio = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cmbDepto = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtIdentidad = New System.Windows.Forms.MaskedTextBox()
-        Me.chkM = New System.Windows.Forms.CheckBox()
-        Me.chkF = New System.Windows.Forms.CheckBox()
         Me.cmbPuesto = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -49,7 +47,9 @@ Partial Class EMPLEADOS
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.prueba2 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -57,78 +57,40 @@ Partial Class EMPLEADOS
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.txtcantidad)
-        Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.DGListado)
         Me.GroupBox2.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox2.Location = New System.Drawing.Point(461, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(552, 403)
+        Me.GroupBox2.Size = New System.Drawing.Size(552, 367)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingreso De informacion"
         '
-        'txtcantidad
-        '
-        Me.txtcantidad.Location = New System.Drawing.Point(150, 366)
-        Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(62, 28)
-        Me.txtcantidad.TabIndex = 20
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 369)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 21)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "cantidad empleados:"
-        '
         'DGListado
         '
+        Me.DGListado.AllowUserToAddRows = False
         Me.DGListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGListado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Identidad, Me.Nombre, Me.Direccion, Me.Puesto, Me.Sexo})
         Me.DGListado.Location = New System.Drawing.Point(6, 24)
         Me.DGListado.Name = "DGListado"
         Me.DGListado.Size = New System.Drawing.Size(542, 329)
         Me.DGListado.TabIndex = 18
         '
-        'Identidad
-        '
-        Me.Identidad.HeaderText = "Identidad"
-        Me.Identidad.Name = "Identidad"
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Direccion"
-        Me.Direccion.Name = "Direccion"
-        '
-        'Puesto
-        '
-        Me.Puesto.HeaderText = "Puesto"
-        Me.Puesto.Name = "Puesto"
-        '
-        'Sexo
-        '
-        Me.Sexo.HeaderText = "Sexo"
-        Me.Sexo.Name = "Sexo"
-        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnSolicitar)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.cmbSexo)
+        Me.GroupBox1.Controls.Add(Me.txtPrueba)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtEdad)
+        Me.GroupBox1.Controls.Add(Me.btnBuscar)
+        Me.GroupBox1.Controls.Add(Me.btnEditar)
+        Me.GroupBox1.Controls.Add(Me.btnIngresar)
         Me.GroupBox1.Controls.Add(Me.cmbmunicipio)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.cmbDepto)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.txtIdentidad)
-        Me.GroupBox1.Controls.Add(Me.chkM)
-        Me.GroupBox1.Controls.Add(Me.chkF)
         Me.GroupBox1.Controls.Add(Me.cmbPuesto)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -138,33 +100,99 @@ Partial Class EMPLEADOS
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtId)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.btnIngresar)
+        Me.GroupBox1.Controls.Add(Me.btnEliminar)
         Me.GroupBox1.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(443, 217)
+        Me.GroupBox1.Size = New System.Drawing.Size(443, 367)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso De informacion"
         '
-        'btnSolicitar
+        'Label2
         '
-        Me.btnSolicitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnSolicitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnSolicitar.Location = New System.Drawing.Point(276, 93)
-        Me.btnSolicitar.Name = "btnSolicitar"
-        Me.btnSolicitar.Size = New System.Drawing.Size(75, 34)
-        Me.btnSolicitar.TabIndex = 21
-        Me.btnSolicitar.Text = "Solicitar"
-        Me.btnSolicitar.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(15, 298)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(59, 21)
+        Me.Label2.TabIndex = 42
+        Me.Label2.Text = "ID puesto"
+        '
+        'cmbSexo
+        '
+        Me.cmbSexo.FormattingEnabled = True
+        Me.cmbSexo.Items.AddRange(New Object() {"Femenino", "Masculino"})
+        Me.cmbSexo.Location = New System.Drawing.Point(277, 58)
+        Me.cmbSexo.Name = "cmbSexo"
+        Me.cmbSexo.Size = New System.Drawing.Size(100, 29)
+        Me.cmbSexo.TabIndex = 41
+        '
+        'txtPrueba
+        '
+        Me.txtPrueba.Enabled = False
+        Me.txtPrueba.Location = New System.Drawing.Point(97, 291)
+        Me.txtPrueba.Name = "txtPrueba"
+        Me.txtPrueba.Size = New System.Drawing.Size(121, 28)
+        Me.txtPrueba.TabIndex = 24
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(15, 131)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(36, 21)
+        Me.Label1.TabIndex = 40
+        Me.Label1.Text = "Edad"
+        '
+        'txtEdad
+        '
+        Me.txtEdad.Location = New System.Drawing.Point(97, 128)
+        Me.txtEdad.Mask = "99"
+        Me.txtEdad.Name = "txtEdad"
+        Me.txtEdad.Size = New System.Drawing.Size(42, 28)
+        Me.txtEdad.TabIndex = 39
+        Me.txtEdad.ValidatingType = GetType(Integer)
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnBuscar.Location = New System.Drawing.Point(276, 253)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 34)
+        Me.btnBuscar.TabIndex = 38
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnEditar
+        '
+        Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnEditar.Location = New System.Drawing.Point(277, 133)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 34)
+        Me.btnEditar.TabIndex = 37
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'btnIngresar
+        '
+        Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnIngresar.Location = New System.Drawing.Point(276, 93)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(75, 34)
+        Me.btnIngresar.TabIndex = 36
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
         'cmbmunicipio
         '
         Me.cmbmunicipio.FormattingEnabled = True
         Me.cmbmunicipio.Location = New System.Drawing.Point(97, 93)
         Me.cmbmunicipio.Name = "cmbmunicipio"
-        Me.cmbmunicipio.Size = New System.Drawing.Size(100, 29)
+        Me.cmbmunicipio.Size = New System.Drawing.Size(121, 29)
         Me.cmbmunicipio.TabIndex = 35
         '
         'Label9
@@ -200,33 +228,13 @@ Partial Class EMPLEADOS
         Me.txtIdentidad.Mask = "9999-9999-99999"
         Me.txtIdentidad.Name = "txtIdentidad"
         Me.txtIdentidad.Size = New System.Drawing.Size(100, 28)
-        Me.txtIdentidad.TabIndex = 31
-        '
-        'chkM
-        '
-        Me.chkM.AutoSize = True
-        Me.chkM.Location = New System.Drawing.Point(314, 62)
-        Me.chkM.Name = "chkM"
-        Me.chkM.Size = New System.Drawing.Size(38, 25)
-        Me.chkM.TabIndex = 30
-        Me.chkM.Text = "M"
-        Me.chkM.UseVisualStyleBackColor = True
-        '
-        'chkF
-        '
-        Me.chkF.AutoSize = True
-        Me.chkF.Location = New System.Drawing.Point(276, 63)
-        Me.chkF.Name = "chkF"
-        Me.chkF.Size = New System.Drawing.Size(35, 25)
-        Me.chkF.TabIndex = 29
-        Me.chkF.Text = "F"
-        Me.chkF.UseVisualStyleBackColor = True
+        Me.txtIdentidad.TabIndex = 15
         '
         'cmbPuesto
         '
         Me.cmbPuesto.FormattingEnabled = True
-        Me.cmbPuesto.Items.AddRange(New Object() {"Gerente", "Jefes de Calidad"})
-        Me.cmbPuesto.Location = New System.Drawing.Point(97, 163)
+        Me.cmbPuesto.Items.AddRange(New Object() {"Gerente", "Jefe de calidad ", "Jefe de TI (Infraestructura)", "Jefe de TI (Desarrollo)", "Soporte TI", "Medios", "Marketing", "Jefe RRHH", "Ejecutivos de RRHH", "Dependiente", "Cocinero", "Tecnicos de mantenimiento", "Desarrollador", "Operador", "Chofer", "Programador"})
+        Me.cmbPuesto.Location = New System.Drawing.Point(97, 253)
         Me.cmbPuesto.Name = "cmbPuesto"
         Me.cmbPuesto.Size = New System.Drawing.Size(121, 29)
         Me.cmbPuesto.TabIndex = 28
@@ -243,7 +251,7 @@ Partial Class EMPLEADOS
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 166)
+        Me.Label5.Location = New System.Drawing.Point(12, 256)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 21)
         Me.Label5.TabIndex = 26
@@ -251,15 +259,16 @@ Partial Class EMPLEADOS
         '
         'txtBarrio
         '
-        Me.txtBarrio.Location = New System.Drawing.Point(97, 128)
+        Me.txtBarrio.Location = New System.Drawing.Point(97, 168)
+        Me.txtBarrio.Multiline = True
         Me.txtBarrio.Name = "txtBarrio"
-        Me.txtBarrio.Size = New System.Drawing.Size(100, 28)
+        Me.txtBarrio.Size = New System.Drawing.Size(121, 79)
         Me.txtBarrio.TabIndex = 25
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 131)
+        Me.Label4.Location = New System.Drawing.Point(12, 171)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 21)
         Me.Label4.TabIndex = 24
@@ -294,23 +303,41 @@ Partial Class EMPLEADOS
         '
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.Location = New System.Drawing.Point(277, 173)
+        Me.Button1.Location = New System.Drawing.Point(277, 213)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 34)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Limpiar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'btnIngresar
+        'btnEliminar
         '
-        Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnIngresar.Location = New System.Drawing.Point(277, 133)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(75, 34)
-        Me.btnIngresar.TabIndex = 2
-        Me.btnIngresar.Text = "Ingresar"
-        Me.btnIngresar.UseVisualStyleBackColor = True
+        Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnEliminar.Location = New System.Drawing.Point(277, 173)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 34)
+        Me.btnEliminar.TabIndex = 2
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'prueba2
+        '
+        Me.prueba2.Location = New System.Drawing.Point(109, 385)
+        Me.prueba2.Name = "prueba2"
+        Me.prueba2.Size = New System.Drawing.Size(100, 20)
+        Me.prueba2.TabIndex = 4
+        '
+        'Button2
+        '
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.Button2.Location = New System.Drawing.Point(252, 385)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 34)
+        Me.Button2.TabIndex = 39
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'EMPLEADOS
         '
@@ -319,38 +346,29 @@ Partial Class EMPLEADOS
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1027, 434)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.prueba2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "EMPLEADOS"
         Me.Text = "EMPLEADOS"
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.DGListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtcantidad As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents DGListado As DataGridView
-    Friend WithEvents Identidad As DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Direccion As DataGridViewTextBoxColumn
-    Friend WithEvents Puesto As DataGridViewTextBoxColumn
-    Friend WithEvents Sexo As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnSolicitar As Button
     Friend WithEvents cmbmunicipio As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents cmbDepto As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txtIdentidad As MaskedTextBox
-    Friend WithEvents chkM As CheckBox
-    Friend WithEvents chkF As CheckBox
     Friend WithEvents cmbPuesto As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -360,5 +378,16 @@ Partial Class EMPLEADOS
     Friend WithEvents Label3 As Label
     Friend WithEvents txtId As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnEditar As Button
     Friend WithEvents btnIngresar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtEdad As MaskedTextBox
+    Friend WithEvents DGListado As DataGridView
+    Friend WithEvents cmbSexo As ComboBox
+    Friend WithEvents txtPrueba As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents prueba2 As TextBox
+    Friend WithEvents Button2 As Button
 End Class

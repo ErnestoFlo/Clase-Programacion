@@ -1,4 +1,14 @@
-﻿Public Class EMPLEADOS
+﻿Imports System.Data.SqlClient
+Public Class EMPLEADOS
+
+    Dim conexion As ConexionCrud = New ConexionCrud
+    Dim dt As New DataTable
+    Dim direccion As String
+    Dim Identidad As String
+    Dim index As Integer
+
+
+
     Private Sub cmbDepto_LostFocus(sender As Object, e As EventArgs) Handles cmbDepto.LostFocus
         Dim Departamento As Integer
         Departamento = cmbDepto.SelectedIndex
@@ -414,19 +424,114 @@
         End Select
     End Sub
 
-    Private Sub chkF_CheckedChanged(sender As Object, e As EventArgs) Handles chkF.CheckedChanged
-        If chkF.Checked = True Then
-            chkM.Enabled = False
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        txtIdentidad.Clear()
+        cmbDepto.ResetText()
+        cmbmunicipio.ResetText()
+        txtBarrio.Clear()
+        cmbPuesto.ResetText()
+        txtNombre.Clear()
+        txtEdad.Clear()
+        txtPrueba.Clear()
+
+
+    End Sub
+
+    Private Sub EMPLEADOS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conexion.conectar()
+        mostrarDatos()
+        abrirConexion()
+        llenarDataGridEmpleados(DGListado)
+    End Sub
+
+    Private Sub mostrarDatos()
+        conexion.Consulta("select * from Center.empleados", "Center.empleados")
+        DGListado.DataSource = conexion.ds.Tables("Center.empleados")
+    End Sub
+
+
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+        Try
+            direccion = cmbDepto.Text & ", " & cmbmunicipio.Text & ", " & txtBarrio.Text
+
+
+            Index = Val(cmbPuesto.SelectedIndex)
+            Identidad = txtIdentidad.Text
+
+            Dim agregar As String = "insert into Center.empleados values(" + txtIdentidad.Text + ",'" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
+            If (conexion.Insertar(agregar)) Then
+                MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                mostrarDatos()
+            Else
+                MessageBox.Show("Error al agregar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+        End Try
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+        Dim id As Integer
+        id = cmbPuesto.SelectedIndex
+        txtPrueba.Text = id
+
+    End Sub
+
+    Private Sub cmbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPuesto.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmbPuesto_LostFocus(sender As Object, e As EventArgs) Handles cmbPuesto.LostFocus
+        Dim id As Integer
+        id = cmbPuesto.SelectedIndex
+        txtPrueba.Text = id
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim id As String
+        id = txtIdentidad.Text
+        prueba2.Text = id
+
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Dim actualizar As String = "identidad = '" + txtIdentidad.Text + "', nombre = '" + txtNombre.Text + "', edad= '" + txtEdad.Text + "', sexo= '" + cmbSexo.Text + "', puesto= '" + cmbPuesto.Text + "', idPuesto= '" + index + "'"
+        Dim sql As String = String.Format("update Center.empleados set identidad= '{0}', nombre= '{1}', edad= '{3}', sexo='{4}', puesto = '{5}', idPuesto = {6}", txtIdentidad.Text, txtNombre.Text, txtEdad.Text, cmbSexo.Text, cmbPuesto.Text, index)
+
+        If (conexion.actualizar(sql)) Then
+            MessageBox.Show("Empleado Actualizado correctamente!!!", "Actualizacion de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            mostrarDatos()
         Else
-            chkM.Enabled = True
+            MessageBox.Show("Error al Actualizar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
-    Private Sub chkM_CheckedChanged(sender As Object, e As EventArgs) Handles chkM.CheckedChanged
-        If chkM.Checked = True Then
-            chkF.Enabled = False
+    Private Sub DGListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGListado.CellContentClick
+        Try
+            Dim dgempleados As DataGridViewRow = DGListado.Rows(e.RowIndex)
+            txtIdentidad.Text = dgempleados.Cells(0).Value.ToString()
+            txtNombre.Text = dgempleados.Cells(1).Value.ToString()
+            txtEdad.Text = dgempleados.Cells(3).Value.ToString()
+            cmbSexo.Text = dgempleados.Cells(4).Value.ToString()
+            cmbPuesto.Text = dgempleados.Cells(5).Value.ToString()
+            txtPrueba.Text = dgempleados.Cells(6).Value.ToString()
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+        End Try
+
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        If (conexion.eliminar("Center.empleados", "identidad= " + txtIdentidad.Text)) Then
+            MessageBox.Show("Empleado Eliminado correctamente!!!", "Eliminacion de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            mostrarDatos()
         Else
-            chkF.Enabled = True
+            MessageBox.Show("Error al Eliminar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+
     End Sub
 End Class

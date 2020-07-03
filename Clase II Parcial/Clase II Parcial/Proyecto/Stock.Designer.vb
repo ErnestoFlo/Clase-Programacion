@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Stock
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Stock
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -30,11 +30,6 @@ Partial Class Stock
         Me.txtPack1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DGCelulares = New System.Windows.Forms.DataGridView()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ddd = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Puest = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Paquete = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGCelulares, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -108,36 +103,10 @@ Partial Class Stock
         'DGCelulares
         '
         Me.DGCelulares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCelulares.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.ddd, Me.Puest, Me.Paquete, Me.Estado})
         Me.DGCelulares.Location = New System.Drawing.Point(6, 27)
         Me.DGCelulares.Name = "DGCelulares"
         Me.DGCelulares.Size = New System.Drawing.Size(545, 150)
         Me.DGCelulares.TabIndex = 1
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Identidad"
-        Me.Id.Name = "Id"
-        '
-        'ddd
-        '
-        Me.ddd.HeaderText = "Nombre"
-        Me.ddd.Name = "ddd"
-        '
-        'Puest
-        '
-        Me.Puest.HeaderText = "Puesto"
-        Me.Puest.Name = "Puest"
-        '
-        'Paquete
-        '
-        Me.Paquete.HeaderText = "Paquete"
-        Me.Paquete.Name = "Paquete"
-        '
-        'Estado
-        '
-        Me.Estado.HeaderText = "Estado"
-        Me.Estado.Name = "Estado"
         '
         'Stock
         '
@@ -165,9 +134,4 @@ Partial Class Stock
     Friend WithEvents txtPack1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents DGCelulares As DataGridView
-    Friend WithEvents Id As DataGridViewTextBoxColumn
-    Friend WithEvents ddd As DataGridViewTextBoxColumn
-    Friend WithEvents Puest As DataGridViewTextBoxColumn
-    Friend WithEvents Paquete As DataGridViewTextBoxColumn
-    Friend WithEvents Estado As DataGridViewTextBoxColumn
 End Class

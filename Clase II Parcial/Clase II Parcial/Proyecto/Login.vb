@@ -22,7 +22,7 @@ Public Class Login
         contra = "12345"
     End Sub
 
-    Private Sub btnRegistrarse_Click(sender As Object, e As EventArgs) Handles btnRegistrarse.Click
+    Private Sub btnRegistrarse_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Registro.Show()
     End Sub

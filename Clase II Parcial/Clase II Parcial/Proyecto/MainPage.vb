@@ -2,19 +2,21 @@
 
 Public Class MainPage
     Private Sub AbrirFormulario(frmHijo As Object)
-
-        If (panelCentral.Controls.Count > 0) Then
-            panelCentral.Controls.RemoveAt(0)
-        Else
-            Dim frm As Form
-            frm = frmHijo
-            frm.TopLevel = False
-            frm.Dock = DockStyle.Fill
-            panelCentral.Controls.Add(frm)
-            panelCentral.Tag = frm
-            frm.Show()
-        End If
-
+        Try
+            If (panelCentral.Controls.Count > 0) Then
+                panelCentral.Controls.RemoveAt(0)
+            Else
+                Dim frm As Form
+                frm = frmHijo
+                frm.TopLevel = False
+                frm.Dock = DockStyle.Fill
+                panelCentral.Controls.Add(frm)
+                panelCentral.Tag = frm
+                frm.Show()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
 
@@ -75,6 +77,10 @@ Public Class MainPage
     End Sub
 
     Private Sub PanelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles PanelSuperior.Paint
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

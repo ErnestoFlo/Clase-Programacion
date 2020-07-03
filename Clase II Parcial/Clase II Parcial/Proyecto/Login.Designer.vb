@@ -23,7 +23,6 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnRegistrarse = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,7 +43,6 @@ Partial Class Login
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.btnRegistrarse)
         Me.GroupBox1.Controls.Add(Me.Panel2)
         Me.GroupBox1.Controls.Add(Me.Panel1)
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
@@ -58,19 +56,6 @@ Partial Class Login
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
         '
-        'btnRegistrarse
-        '
-        Me.btnRegistrarse.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegistrarse.Location = New System.Drawing.Point(245, 125)
-        Me.btnRegistrarse.Name = "btnRegistrarse"
-        Me.btnRegistrarse.Size = New System.Drawing.Size(103, 35)
-        Me.btnRegistrarse.TabIndex = 6
-        Me.btnRegistrarse.Text = "Registrarse"
-        Me.btnRegistrarse.UseVisualStyleBackColor = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Aqua
@@ -83,21 +68,22 @@ Partial Class Login
         '
         'txtContraseña
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(66, 9)
+        Me.txtContraseña.Location = New System.Drawing.Point(89, 9)
         Me.txtContraseña.Multiline = True
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContraseña.Size = New System.Drawing.Size(246, 24)
+        Me.txtContraseña.Size = New System.Drawing.Size(223, 24)
         Me.txtContraseña.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label2.Location = New System.Drawing.Point(3, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 25)
+        Me.Label2.Size = New System.Drawing.Size(88, 25)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Contra"
+        Me.Label2.Text = "Contraseña"
         '
         'Panel1
         '
@@ -111,15 +97,16 @@ Partial Class Login
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(66, 9)
+        Me.txtUsuario.Location = New System.Drawing.Point(89, 9)
         Me.txtUsuario.Multiline = True
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(246, 24)
+        Me.txtUsuario.Size = New System.Drawing.Size(223, 24)
         Me.txtUsuario.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label1.Location = New System.Drawing.Point(3, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 25)
@@ -204,6 +191,7 @@ Partial Class Login
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -216,7 +204,6 @@ Partial Class Login
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnRegistrarse As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txtContraseña As TextBox
     Friend WithEvents Label2 As Label

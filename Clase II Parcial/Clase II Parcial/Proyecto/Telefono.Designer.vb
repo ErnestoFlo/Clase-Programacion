@@ -28,11 +28,6 @@ Partial Class Telefono
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Identid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.No = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dir = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pues = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Se = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnEntregar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -96,36 +91,10 @@ Partial Class Telefono
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Identid, Me.No, Me.dir, Me.Pues, Me.Se})
         Me.DataGridView1.Location = New System.Drawing.Point(16, 27)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(540, 191)
         Me.DataGridView1.TabIndex = 3
-        '
-        'Identid
-        '
-        Me.Identid.HeaderText = "Identidad"
-        Me.Identid.Name = "Identid"
-        '
-        'No
-        '
-        Me.No.HeaderText = "Nombre"
-        Me.No.Name = "No"
-        '
-        'dir
-        '
-        Me.dir.HeaderText = "Direccion"
-        Me.dir.Name = "dir"
-        '
-        'Pues
-        '
-        Me.Pues.HeaderText = "Puesto"
-        Me.Pues.Name = "Pues"
-        '
-        'Se
-        '
-        Me.Se.HeaderText = "Sexo"
-        Me.Se.Name = "Se"
         '
         'btnEntregar
         '
@@ -167,10 +136,5 @@ Partial Class Telefono
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Identid As DataGridViewTextBoxColumn
-    Friend WithEvents No As DataGridViewTextBoxColumn
-    Friend WithEvents dir As DataGridViewTextBoxColumn
-    Friend WithEvents Pues As DataGridViewTextBoxColumn
-    Friend WithEvents Se As DataGridViewTextBoxColumn
     Friend WithEvents btnEntregar As Button
 End Class
