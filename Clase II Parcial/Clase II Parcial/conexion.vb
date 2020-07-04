@@ -7,6 +7,8 @@ Module conexion
     Public adaptador As SqlDataAdapter
     Public dt As DataTable
     Public comando As SqlCommand
+    Public dr As SqlDataReader
+
 
     Sub llenarDataGridEmpleados(ByVal dgv As DataGridView)
         Try
@@ -51,5 +53,24 @@ Module conexion
             cn.Close()
         End Try
     End Sub
+
+    Function validarEmpleados(ByVal codigo As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select * from Center.empelados where IdCodigo = '" + codigo + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Return respuesta
+    End Function
 
 End Module

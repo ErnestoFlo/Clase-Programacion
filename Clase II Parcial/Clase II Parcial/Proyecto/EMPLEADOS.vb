@@ -454,18 +454,28 @@ Public Class EMPLEADOS
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Try
+
             direccion = cmbDepto.Text & ", " & cmbmunicipio.Text & ", " & txtBarrio.Text
 
             index = Val(cmbPuesto.SelectedIndex)
             Identidad = txtIdentidad.Text
 
-            Dim agregar As String = "insert into Center.empleados values(" + prueba2.Text + ",'" + Identidad + "','" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
-            If (conexion.Insertar(agregar)) Then
-                MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                mostrarDatos()
+            If (conexion.validarEmpleados(prueba2.Text) = False) Then
+                Dim agregar As String = "insert into Center.empleados values(" + prueba2.Text + ",'" + Identidad + "','" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
+                If (conexion.Insertar(agregar)) Then
+                    MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    mostrarDatos()
+                Else
+                    MessageBox.Show("Error al agregar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
             Else
-                MessageBox.Show("Error al agregar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MsgBox("Este empleado ya existe", vbObjectError)
+                conexion.conexion.Close()
+
             End If
+
+
+
         Catch ex As Exception
             MessageBox.Show("no se lleno por: " + ex.ToString)
         End Try
@@ -515,12 +525,13 @@ Public Class EMPLEADOS
     Private Sub DGListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGListado.CellContentClick
         Try
             Dim dgempleados As DataGridViewRow = DGListado.Rows(e.RowIndex)
-            txtIdentidad.Text = dgempleados.Cells(0).Value.ToString()
-            txtNombre.Text = dgempleados.Cells(1).Value.ToString()
-            txtEdad.Text = dgempleados.Cells(3).Value.ToString()
-            cmbSexo.Text = dgempleados.Cells(4).Value.ToString()
-            cmbPuesto.Text = dgempleados.Cells(5).Value.ToString()
-            txtPrueba.Text = dgempleados.Cells(6).Value.ToString()
+            prueba2.Text = dgempleados.Cells(0).Value.ToString()
+            txtIdentidad.Text = dgempleados.Cells(1).Value.ToString()
+            txtNombre.Text = dgempleados.Cells(2).Value.ToString()
+            txtEdad.Text = dgempleados.Cells(4).Value.ToString()
+            cmbSexo.Text = dgempleados.Cells(5).Value.ToString()
+            cmbPuesto.Text = dgempleados.Cells(6).Value.ToString()
+            txtPrueba.Text = dgempleados.Cells(7).Value.ToString()
         Catch ex As Exception
             MessageBox.Show("no se lleno por: " + ex.ToString)
         End Try

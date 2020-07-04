@@ -8,6 +8,7 @@ Public Class ConexionCrud
     Public ds As DataSet = New DataSet
     Public da As SqlDataAdapter
     Public comando As SqlCommand
+    Public dr As SqlDataReader
 
     Public Sub conectar()
         Try
@@ -49,6 +50,26 @@ Public Class ConexionCrud
         Else
             Return False
         End If
+    End Function
+
+    Function validarEmpleados(ByVal codigo As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select * from Center.empleados where IdCodigo = '" + codigo + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+            conexion.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Return respuesta
     End Function
 
     Function Insertar(ByVal sql)
