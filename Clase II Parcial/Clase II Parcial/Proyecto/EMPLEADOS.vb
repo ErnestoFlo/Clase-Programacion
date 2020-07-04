@@ -456,8 +456,7 @@ Public Class EMPLEADOS
         Try
             direccion = cmbDepto.Text & ", " & cmbmunicipio.Text & ", " & txtBarrio.Text
 
-
-            Index = Val(cmbPuesto.SelectedIndex)
+            index = Val(cmbPuesto.SelectedIndex)
             Identidad = txtIdentidad.Text
 
             Dim agregar As String = "insert into Center.empleados values(" + prueba2.Text + ",'" + Identidad + "','" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
