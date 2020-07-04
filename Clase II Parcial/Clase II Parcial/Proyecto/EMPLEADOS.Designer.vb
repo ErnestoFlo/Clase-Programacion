@@ -22,6 +22,7 @@ Partial Class EMPLEADOS
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGListado = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -30,9 +31,6 @@ Partial Class EMPLEADOS
         Me.txtPrueba = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtEdad = New System.Windows.Forms.MaskedTextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.cmbmunicipio = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cmbDepto = New System.Windows.Forms.ComboBox()
@@ -46,13 +44,18 @@ Partial Class EMPLEADOS
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.Label()
+        Me.prueba2 = New System.Windows.Forms.TextBox()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.prueba2 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -78,6 +81,7 @@ Partial Class EMPLEADOS
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.prueba2)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.cmbSexo)
         Me.GroupBox1.Controls.Add(Me.txtPrueba)
@@ -153,39 +157,6 @@ Partial Class EMPLEADOS
         Me.txtEdad.Size = New System.Drawing.Size(42, 28)
         Me.txtEdad.TabIndex = 39
         Me.txtEdad.ValidatingType = GetType(Integer)
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnBuscar.Location = New System.Drawing.Point(276, 253)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 34)
-        Me.btnBuscar.TabIndex = 38
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnEditar
-        '
-        Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnEditar.Location = New System.Drawing.Point(277, 133)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 34)
-        Me.btnEditar.TabIndex = 37
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'btnIngresar
-        '
-        Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnIngresar.Location = New System.Drawing.Point(276, 93)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(75, 34)
-        Me.btnIngresar.TabIndex = 36
-        Me.btnIngresar.Text = "Ingresar"
-        Me.btnIngresar.UseVisualStyleBackColor = True
         '
         'cmbmunicipio
         '
@@ -299,45 +270,71 @@ Partial Class EMPLEADOS
         Me.txtId.TabIndex = 21
         Me.txtId.Text = "Identidad"
         '
+        'prueba2
+        '
+        Me.prueba2.Location = New System.Drawing.Point(97, 325)
+        Me.prueba2.Name = "prueba2"
+        Me.prueba2.Size = New System.Drawing.Size(121, 28)
+        Me.prueba2.TabIndex = 4
+        '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnBuscar.Image = Global.Clase_II_Parcial.My.Resources.Resources.buscar
+        Me.btnBuscar.Location = New System.Drawing.Point(277, 144)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(51, 45)
+        Me.btnBuscar.TabIndex = 38
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnEditar
+        '
+        Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnEditar.Image = Global.Clase_II_Parcial.My.Resources.Resources.copiar
+        Me.btnEditar.Location = New System.Drawing.Point(334, 93)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(51, 45)
+        Me.btnEditar.TabIndex = 37
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'btnIngresar
+        '
+        Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnIngresar.Image = Global.Clase_II_Parcial.My.Resources.Resources.editar1
+        Me.btnIngresar.Location = New System.Drawing.Point(277, 93)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(51, 45)
+        Me.btnIngresar.TabIndex = 36
+        Me.btnIngresar.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button1.Location = New System.Drawing.Point(277, 213)
+        Me.Button1.Image = Global.Clase_II_Parcial.My.Resources.Resources.limpiar
+        Me.Button1.Location = New System.Drawing.Point(277, 195)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 34)
+        Me.Button1.Size = New System.Drawing.Size(51, 45)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Limpiar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
         Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
         Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnEliminar.Location = New System.Drawing.Point(277, 173)
+        Me.btnEliminar.Image = Global.Clase_II_Parcial.My.Resources.Resources.eliminar
+        Me.btnEliminar.Location = New System.Drawing.Point(334, 144)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 34)
+        Me.btnEliminar.Size = New System.Drawing.Size(51, 45)
         Me.btnEliminar.TabIndex = 2
-        Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'prueba2
-        '
-        Me.prueba2.Location = New System.Drawing.Point(109, 385)
-        Me.prueba2.Name = "prueba2"
-        Me.prueba2.Size = New System.Drawing.Size(100, 20)
-        Me.prueba2.TabIndex = 4
-        '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.Button2.Location = New System.Drawing.Point(252, 385)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 34)
-        Me.Button2.TabIndex = 39
-        Me.Button2.Text = "Buscar"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'EMPLEADOS
         '
@@ -346,8 +343,6 @@ Partial Class EMPLEADOS
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1027, 434)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.prueba2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -357,8 +352,8 @@ Partial Class EMPLEADOS
         CType(Me.DGListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -389,5 +384,6 @@ Partial Class EMPLEADOS
     Friend WithEvents txtPrueba As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents prueba2 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents ErrorValidacion As ErrorProvider
 End Class

@@ -22,6 +22,7 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtContraseña = New System.Windows.Forms.TextBox()
@@ -34,10 +35,13 @@ Partial Class Login
         Me.PanelSuperior = New System.Windows.Forms.Panel()
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PanelSuperior.SuspendLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -48,7 +52,7 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.btnIngresar)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Font = New System.Drawing.Font("Bebas Neue", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Desktop
         Me.GroupBox1.Location = New System.Drawing.Point(23, 38)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(388, 183)
@@ -58,10 +62,10 @@ Partial Class Login
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Aqua
+        Me.Panel2.BackColor = System.Drawing.Color.Turquoise
         Me.Panel2.Controls.Add(Me.txtContraseña)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(16, 69)
+        Me.Panel2.Location = New System.Drawing.Point(19, 80)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(332, 43)
         Me.Panel2.TabIndex = 5
@@ -87,10 +91,10 @@ Partial Class Login
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Aqua
+        Me.Panel1.BackColor = System.Drawing.Color.Turquoise
         Me.Panel1.Controls.Add(Me.txtUsuario)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(16, 20)
+        Me.Panel1.Location = New System.Drawing.Point(19, 31)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(332, 43)
         Me.Panel1.TabIndex = 0
@@ -119,7 +123,7 @@ Partial Class Login
         Me.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIngresar.Location = New System.Drawing.Point(16, 125)
+        Me.btnIngresar.Location = New System.Drawing.Point(19, 136)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(83, 35)
         Me.btnIngresar.TabIndex = 4
@@ -132,7 +136,7 @@ Partial Class Login
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Location = New System.Drawing.Point(105, 125)
+        Me.btnCancelar.Location = New System.Drawing.Point(108, 136)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(83, 35)
         Me.btnCancelar.TabIndex = 3
@@ -141,7 +145,7 @@ Partial Class Login
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.BackColor = System.Drawing.Color.Aqua
+        Me.PanelSuperior.BackColor = System.Drawing.SystemColors.Desktop
         Me.PanelSuperior.Controls.Add(Me.btnMinimizar)
         Me.PanelSuperior.Controls.Add(Me.btnCerrar)
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
@@ -180,11 +184,15 @@ Partial Class Login
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Clase_II_Parcial.My.Resources.Resources._21nkbhpXM_L__AC_SY400_
+        Me.BackgroundImage = Global.Clase_II_Parcial.My.Resources.Resources.depositphotos_198606870_stock_video_multicolored_motion_gradient_background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(423, 249)
         Me.Controls.Add(Me.PanelSuperior)
@@ -199,6 +207,7 @@ Partial Class Login
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.PanelSuperior.ResumeLayout(False)
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -215,4 +224,6 @@ Partial Class Login
     Friend WithEvents PanelSuperior As Panel
     Friend WithEvents btnMinimizar As Button
     Friend WithEvents btnCerrar As Button
+    Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents ErrorValidacion As ErrorProvider
 End Class

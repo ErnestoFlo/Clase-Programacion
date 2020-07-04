@@ -287,5 +287,41 @@
   <ItemGroup>
     <None Include="Resources\21nkbhpXM+L._AC_SY400_.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpieza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_198606870-stock-video-multicolored-motion-gradient-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO EMPRESA FINAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_198606870-stock-video-multicolored-motion-gradient-background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO EMPRESA FINAL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\519c190ba4e93ebf48ed57a87a6d7a521.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

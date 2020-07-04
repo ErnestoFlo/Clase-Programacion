@@ -24,11 +24,11 @@ Partial Class Telefono
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtId = New System.Windows.Forms.MaskedTextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnEntregar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -36,8 +36,8 @@ Partial Class Telefono
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.txtId)
-        Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -55,17 +55,6 @@ Partial Class Telefono
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(116, 28)
         Me.txtId.TabIndex = 18
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnBuscar.Location = New System.Drawing.Point(98, 70)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 35)
-        Me.btnBuscar.TabIndex = 17
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -109,6 +98,17 @@ Partial Class Telefono
         Me.btnEntregar.Text = "Asignar Telefono  Celular"
         Me.btnEntregar.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.Button1.Image = Global.Clase_II_Parcial.My.Resources.Resources.buscar
+        Me.Button1.Location = New System.Drawing.Point(98, 70)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(51, 45)
+        Me.Button1.TabIndex = 39
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Telefono
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -132,9 +132,9 @@ Partial Class Telefono
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtId As MaskedTextBox
-    Friend WithEvents btnBuscar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnEntregar As Button
+    Friend WithEvents Button1 As Button
 End Class

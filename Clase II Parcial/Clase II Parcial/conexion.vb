@@ -10,7 +10,7 @@ Module conexion
 
     Sub llenarDataGridEmpleados(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("Select empleados.identidad,empleados.nombre,empleados.direccion,empleados.edad,empleados.sexo,empleados.puesto from Center.empleados", cn)
+            adaptador = New SqlDataAdapter("Select * from Center.empleados", cn)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt

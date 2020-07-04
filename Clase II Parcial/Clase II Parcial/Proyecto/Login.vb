@@ -51,4 +51,32 @@ Public Class Login
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         End
     End Sub
+
+    Private Sub txtUsuario_MouseHover(sender As Object, e As EventArgs) Handles txtUsuario.MouseHover
+        ToolTip.SetToolTip(txtUsuario, "Ejemplo: ADMIN")
+        ToolTip.ToolTipTitle = "Usuario"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtContraseña_MouseHover(sender As Object, e As EventArgs) Handles txtContraseña.MouseHover
+        ToolTip.SetToolTip(txtContraseña, "Ejemplo: 12345")
+        ToolTip.ToolTipTitle = "Contraseña"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtUsuario_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtUsuario.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+    End Sub
+
+    Private Sub txtContraseña_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtContraseña.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+    End Sub
 End Class

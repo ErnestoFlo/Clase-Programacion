@@ -43,7 +43,7 @@ Public Class ConexionCrud
     Function actualizar(ByVal sql)
         conexion.Open()
         comando = New SqlCommand(sql, conexion)
-        Dim i As Int16 = comando.ExecuteNonQuery
+        Dim i As Integer = comando.ExecuteNonQuery
         If (i > 0) Then
             Return True
         Else

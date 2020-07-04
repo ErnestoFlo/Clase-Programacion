@@ -32,7 +32,7 @@ Partial Class PantallaDeCarga
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Clase_II_Parcial.My.Resources.Resources.LOGO_EMPRESA
+        Me.PictureBox1.Image = Global.Clase_II_Parcial.My.Resources.Resources.LOGO_EMPRESA_FINAL1
         Me.PictureBox1.Location = New System.Drawing.Point(150, 31)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(218, 166)
@@ -57,8 +57,8 @@ Partial Class PantallaDeCarga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Clase_II_Parcial.My.Resources.Resources.suave_nublado_es_degradado_colores_pastel_fondo_abstracto_cielo_color_dulce_6529_729
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BackgroundImage = Global.Clase_II_Parcial.My.Resources.Resources._519c190ba4e93ebf48ed57a87a6d7a521
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(526, 289)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.PictureBox1)
