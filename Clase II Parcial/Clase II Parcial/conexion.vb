@@ -23,7 +23,8 @@ Module conexion
 
     Sub llenarDataGridStock(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("select st.identidad , st.nombre, st.puesto, te.paquete, te.cantidad, te.modelo from Center.stock st inner join Center.telefonos te on st.idPuesto = te.id", cn)
+            'adaptador = New SqlDataAdapter("select st.identidad , st.nombre, st.puesto, te.paquete, te.cantidad, te.modelo from Center.stock st inner join Center.telefonos te on st.idPuesto = te.id", cn)
+            adaptador = New SqlDataAdapter("Select * from Center.stock", cn)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
@@ -59,6 +60,25 @@ Module conexion
         Try
             conexion.Open()
             comando = New SqlCommand("select * from Center.empleados where IdCodigo = '" + codigo + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Return respuesta
+    End Function
+
+    Function validarStock(ByVal codigo As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select * from Center.stock where IdCodigo = '" + codigo + "'", conexion)
             dr = comando.ExecuteReader
             If dr.Read Then
                 respuesta = True

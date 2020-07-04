@@ -77,11 +77,32 @@ Public Class ConexionCrud
         conexion.Open()
         comando = New SqlCommand(sql, conexion)
         Dim i As Integer = comando.ExecuteNonQuery
+        conexion.Close()
+
         If (i > 0) Then
             Return True
         Else
             Return False
         End If
+    End Function
+
+    Function validarStock(ByVal codigo As String) As Boolean
+        Dim respuesta As Boolean = False
+        Try
+            conexion.Open()
+            comando = New SqlCommand("select * from Center.stock where IdCodigo = '" + codigo + "'", conexion)
+            dr = comando.ExecuteReader
+            If dr.Read Then
+                respuesta = True
+                dr.Close()
+
+            End If
+            conexion.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Return respuesta
     End Function
 End Class
 
