@@ -43,20 +43,24 @@ Public Class Telefono
     Private Sub btnEntregar_Click(sender As Object, e As EventArgs) Handles btnEntregar.Click
 
         Try
-
-            If (conexion.validarStock(txtCodigo.Text) = False) Then
-                Dim agregar As String = "insert into Center.stock values(" + txtCodigo.Text + ",'" + txtIdentidad.Text + "','" + txtNombre.Text + "','" + txtPuesto.Text + "','" + txtPrueba.Text + "')"
-                If (conexion.Insertar(agregar)) Then
-                    MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    mostrarDatos()
-                    conexion.conexion.Close()
-                Else
-                    MessageBox.Show("Error al agregar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
+            Dim id As Integer
+            id = Val(txtPrueba.Text)
+            If id > 8 Then
+                MessageBox.Show("No hay telefono disponible para este usuario", "Error al asiganr telefono", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                MsgBox("Este empleado ya existe", vbObjectError)
+                If (conexion.validarStock(txtCodigo.Text) = False) Then
+                    Dim agregar As String = "insert into Center.stock values(" + txtCodigo.Text + ",'" + txtIdentidad.Text + "','" + txtNombre.Text + "','" + txtPuesto.Text + "','" + txtPrueba.Text + "')"
+                    If (conexion.Insertar(agregar)) Then
+                        MessageBox.Show("Asignacion de telefono completada!!!", "Ingreso de telefono", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        mostrarDatos()
+                        conexion.conexion.Close()
+                    Else
+                        MessageBox.Show("Error en la asiganacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Else
+                    MessageBox.Show("Telefono ya asignado a este empleado", "Repeticion de asignacion", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
             End If
-
             conexion.conexion.Close()
 
         Catch ex As Exception
