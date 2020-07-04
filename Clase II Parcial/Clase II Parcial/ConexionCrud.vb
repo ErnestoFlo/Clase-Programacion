@@ -25,20 +25,22 @@ Public Class ConexionCrud
         cmb = New SqlCommandBuilder(da)
         da.Fill(ds, tabla)
     End Sub
-
-
     Function eliminar(ByVal tabla, ByVal condicion)
-        conexion.Open()
-        Dim elimina As String = "delete from " + tabla + "where " + condicion
-        comando = New SqlCommand(elimina, conexion)
-        Dim i As Integer = comando.ExecuteNonQuery
-        conexion.Close()
+        Try
+            conexion.Open()
+            Dim elimina As String = "delete from " + tabla + " where " + condicion
+            comando = New SqlCommand(elimina, conexion)
+            Dim i As Integer = comando.ExecuteNonQuery()
+            conexion.Close()
+            If (i > 0) Then
+                Return True
+            Else
+                Return False
 
-        If (i > 0) Then
-            Return True
-        Else
-            Return False
-        End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Elimine primero el empleado")
+        End Try
     End Function
 
     Function actualizar(ByVal sql)
@@ -63,8 +65,7 @@ Public Class ConexionCrud
                 dr.Close()
 
             End If
-            conexion.Close()
-
+            conexion.Close
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -76,7 +77,6 @@ Public Class ConexionCrud
         conexion.Open()
         comando = New SqlCommand(sql, conexion)
         Dim i As Integer = comando.ExecuteNonQuery
-        conexion.Close()
         If (i > 0) Then
             Return True
         Else

@@ -34,7 +34,7 @@ Module conexion
 
     Sub llenarDataGridTelefonos(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("Select telefonos.id, telefonos.puesto, telefonos.paquete, telefonos.cantidad from Center.telefonos", cn)
+            adaptador = New SqlDataAdapter("Select * from Center.empleados", cn)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
@@ -58,7 +58,7 @@ Module conexion
         Dim respuesta As Boolean = False
         Try
             conexion.Open()
-            comando = New SqlCommand("select * from Center.empelados where IdCodigo = '" + codigo + "'", conexion)
+            comando = New SqlCommand("select * from Center.empleados where IdCodigo = '" + codigo + "'", conexion)
             dr = comando.ExecuteReader
             If dr.Read Then
                 respuesta = True
@@ -72,5 +72,7 @@ Module conexion
 
         Return respuesta
     End Function
+
+
 
 End Module

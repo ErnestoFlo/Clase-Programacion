@@ -489,11 +489,6 @@ Public Class EMPLEADOS
         txtPrueba.Text = id
 
     End Sub
-
-    Private Sub cmbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPuesto.SelectedIndexChanged
-
-    End Sub
-
     Private Sub cmbPuesto_LostFocus(sender As Object, e As EventArgs) Handles cmbPuesto.LostFocus
         Dim id As Integer
         id = cmbPuesto.SelectedIndex
@@ -539,14 +534,18 @@ Public Class EMPLEADOS
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        If (conexion.eliminar("Center.empleados", "identidad= " + txtIdentidad.Text)) Then
-            MessageBox.Show("Empleado Eliminado correctamente!!!", "Eliminacion de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            mostrarDatos()
-        Else
-            MessageBox.Show("Error al Eliminar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
-        conexion.conexion.Close()
+        Try
+            If (conexion.eliminar("Center.empleados", "IdCodigo = " + prueba2.Text)) Then
+                MessageBox.Show("Registro eliminado correctamente")
+                mostrarDatos()
+            Else
+                MessageBox.Show("error al eliminar")
 
+            End If
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+            conexion.conexion.Close()
+        End Try
     End Sub
 
     Private Sub txtIdentidad_MouseHover(sender As Object, e As EventArgs) Handles txtIdentidad.MouseHover
@@ -714,8 +713,20 @@ Public Class EMPLEADOS
         End If
     End Sub
 
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        conexion.conexion.Close()
-
+    Private Sub busquedaDeDatos()
+        conexion.Consulta("select * from Center.empleados where IdCodigo = '" + prueba2.Text + "'", "Center.empleados")
+        DGListado.DataSource = conexion.ds.Tables("Center.empleados")
     End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        conexion.Consulta("select * from Center.empleados where IdCodigo = '" + prueba2.Text + "'", "Center.empleados")
+
+        If (conexion.validarEmpleados(prueba2.Text) = False) Then
+            MessageBox.Show("Error en la busqueda, el empleado no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            busquedaDeDatos()
+
+        End If
+    End Sub
+
 End Class
