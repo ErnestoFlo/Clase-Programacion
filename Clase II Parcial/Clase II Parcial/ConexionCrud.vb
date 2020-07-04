@@ -104,6 +104,20 @@ Public Class ConexionCrud
 
         Return respuesta
     End Function
+
+    Function MostrarAsignacion(ByVal sql)
+        conexion.Open()
+        comando = New SqlCommand(sql, conexion)
+        Dim i As Integer = comando.ExecuteNonQuery
+        conexion.Close()
+
+        If (i > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
 End Class
 
 

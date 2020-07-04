@@ -14,7 +14,6 @@ Public Class Telefono
     Private Sub Telefono_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         abrirConexion()
         llenarDataGridTelefonos(DGtelefono)
-        llenarDataGridStock(DgStock)
     End Sub
 
     Private Sub busquedaDeDatos()
@@ -35,11 +34,6 @@ Public Class Telefono
 
     End Sub
 
-    Private Sub mostrarDatos()
-        conexion.Consulta("select * from Center.stock", "Center.stock")
-        DgStock.DataSource = conexion.ds.Tables("Center.stock")
-    End Sub
-
     Private Sub btnEntregar_Click(sender As Object, e As EventArgs) Handles btnEntregar.Click
 
         Try
@@ -52,7 +46,6 @@ Public Class Telefono
                     Dim agregar As String = "insert into Center.stock values(" + txtCodigo.Text + ",'" + txtIdentidad.Text + "','" + txtNombre.Text + "','" + txtPuesto.Text + "','" + txtPrueba.Text + "')"
                     If (conexion.Insertar(agregar)) Then
                         MessageBox.Show("Asignacion de telefono completada!!!", "Ingreso de telefono", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        mostrarDatos()
                         conexion.conexion.Close()
                     Else
                         MessageBox.Show("Error en la asiganacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

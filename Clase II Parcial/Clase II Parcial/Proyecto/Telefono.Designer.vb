@@ -23,6 +23,7 @@ Partial Class Telefono
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnEntregar = New System.Windows.Forms.Button()
         Me.txtPuesto = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPrueba = New System.Windows.Forms.TextBox()
@@ -35,12 +36,9 @@ Partial Class Telefono
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DgStock = New System.Windows.Forms.DataGridView()
         Me.DGtelefono = New System.Windows.Forms.DataGridView()
-        Me.btnEntregar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DgStock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGtelefono, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -66,6 +64,19 @@ Partial Class Telefono
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Identidad Solicitada"
+        '
+        'btnEntregar
+        '
+        Me.btnEntregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.btnEntregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnEntregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEntregar.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEntregar.Location = New System.Drawing.Point(39, 217)
+        Me.btnEntregar.Name = "btnEntregar"
+        Me.btnEntregar.Size = New System.Drawing.Size(157, 58)
+        Me.btnEntregar.TabIndex = 4
+        Me.btnEntregar.Text = "Asignar Telefono  Celular"
+        Me.btnEntregar.UseVisualStyleBackColor = True
         '
         'txtPuesto
         '
@@ -165,24 +176,15 @@ Partial Class Telefono
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.DgStock)
         Me.GroupBox2.Controls.Add(Me.DGtelefono)
         Me.GroupBox2.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox2.Location = New System.Drawing.Point(284, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(574, 434)
+        Me.GroupBox2.Size = New System.Drawing.Size(574, 238)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informacion de Ingreso"
-        '
-        'DgStock
-        '
-        Me.DgStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgStock.Location = New System.Drawing.Point(16, 224)
-        Me.DgStock.Name = "DgStock"
-        Me.DgStock.Size = New System.Drawing.Size(540, 191)
-        Me.DgStock.TabIndex = 4
         '
         'DGtelefono
         '
@@ -192,26 +194,13 @@ Partial Class Telefono
         Me.DGtelefono.Size = New System.Drawing.Size(540, 191)
         Me.DGtelefono.TabIndex = 3
         '
-        'btnEntregar
-        '
-        Me.btnEntregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.btnEntregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.btnEntregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEntregar.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEntregar.Location = New System.Drawing.Point(39, 217)
-        Me.btnEntregar.Name = "btnEntregar"
-        Me.btnEntregar.Size = New System.Drawing.Size(157, 58)
-        Me.btnEntregar.TabIndex = 4
-        Me.btnEntregar.Text = "Asignar Telefono  Celular"
-        Me.btnEntregar.UseVisualStyleBackColor = True
-        '
         'Telefono
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(875, 461)
+        Me.ClientSize = New System.Drawing.Size(875, 323)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -220,7 +209,6 @@ Partial Class Telefono
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.DgStock, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGtelefono, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -233,7 +221,6 @@ Partial Class Telefono
     Friend WithEvents btnEntregar As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtCodigo As TextBox
-    Friend WithEvents DgStock As DataGridView
     Friend WithEvents txtPuesto As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPrueba As TextBox

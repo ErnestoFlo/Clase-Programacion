@@ -24,7 +24,7 @@ Module conexion
     Sub llenarDataGridStock(ByVal dgv As DataGridView)
         Try
             'adaptador = New SqlDataAdapter("select st.identidad , st.nombre, st.puesto, te.paquete, te.cantidad, te.modelo from Center.stock st inner join Center.telefonos te on st.idPuesto = te.id", cn)
-            adaptador = New SqlDataAdapter("Select * from Center.stock", cn)
+            adaptador = New SqlDataAdapter("select st.IdCodigo, st.identidad , st.nombre, st.puesto, te.modelo,te.tipoPaquete,te.Descripcion, te.cantidad from Center.stock st inner join Center.telefonos te on st.idPuesto = te.id", cn)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
