@@ -503,18 +503,21 @@ Public Class EMPLEADOS
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Dim actualizar As String = "identidad = '" + txtIdentidad.Text + "', nombre = '" + txtNombre.Text + "', edad= '" + txtEdad.Text + "', sexo= '" + cmbSexo.Text + "', puesto= '" + cmbPuesto.Text + "', idPuesto= '" + index + "'"
-        Dim sql As String = String.Format("update Center.empleados set identidad= '{0}', nombre= '{1}', edad= '{3}', sexo='{4}', puesto = '{5}', idPuesto = {6}", txtIdentidad.Text, txtNombre.Text, txtEdad.Text, cmbSexo.Text, cmbPuesto.Text, index
-                                          )
-
-        If (conexion.actualizar(sql)) Then
-            MessageBox.Show("Empleado Actualizado correctamente!!!", "Actualizacion de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            mostrarDatos()
-        Else
-            MessageBox.Show("Error al Actualizar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
-        conexion.conexion.Close()
-
+        direccion = cmbDepto.Text & ", " & cmbmunicipio.Text & ", " & txtBarrio.Text
+        Try
+            Dim modificar As String =
+           "identidad='" + txtIdentidad.Text + "', nombre='" + txtNombre.Text + "', direccion='" + txtBarrio.Text + "', edad='" + txtEdad.Text + "',sexo='" + cmbSexo.Text + "',puesto='" + cmbPuesto.Text + "',idPuesto='" + txtPrueba.Text + "'"
+            If (conexion.modificar("Center.empleados", modificar, " IdCodigo=" + prueba2.Text)) Then
+                MessageBox.Show("Actualizado")
+                mostrarDatos()
+                conexion.conexion.Close()
+            Else
+                MessageBox.Show("Error al actualizar")
+                conexion.conexion.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+        End Try
     End Sub
 
     Private Sub DGListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGListado.CellContentClick
@@ -523,10 +526,14 @@ Public Class EMPLEADOS
             prueba2.Text = dgempleados.Cells(0).Value.ToString()
             txtIdentidad.Text = dgempleados.Cells(1).Value.ToString()
             txtNombre.Text = dgempleados.Cells(2).Value.ToString()
+            txtBarrio.Text = dgempleados.Cells(3).Value.ToString()
             txtEdad.Text = dgempleados.Cells(4).Value.ToString()
             cmbSexo.Text = dgempleados.Cells(5).Value.ToString()
             cmbPuesto.Text = dgempleados.Cells(6).Value.ToString()
             txtPrueba.Text = dgempleados.Cells(7).Value.ToString()
+
+            cmbDepto.Enabled = False
+            cmbmunicipio.Enabled = False
         Catch ex As Exception
             MessageBox.Show("no se lleno por: " + ex.ToString)
         End Try

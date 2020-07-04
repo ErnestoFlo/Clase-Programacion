@@ -21,6 +21,7 @@ Module conexion
         End Try
     End Sub
 
+
     Sub llenarDataGridStock(ByVal dgv As DataGridView)
         Try
             'adaptador = New SqlDataAdapter("select st.identidad , st.nombre, st.puesto, te.paquete, te.cantidad, te.modelo from Center.stock st inner join Center.telefonos te on st.idPuesto = te.id", cn)
@@ -93,6 +94,31 @@ Module conexion
         Return respuesta
     End Function
 
+    Function paquetes(ByVal sql)
+        conexion.Open()
+        comando = New SqlCommand(sql, conexion)
+        Dim i As Integer = comando.ExecuteNonQuery
+        conexion.Close()
+        Return i
+    End Function
 
 
+    Function modificar(ByVal tabla, ByVal campos, ByVal condicion)
+        Try
+            conexion.Open()
+            Dim modificarE As String = "update " + tabla + " set " + campos + " where " + condicion
+            comando = New SqlCommand(modificarE, conexion)
+            Dim i As Integer = comando.ExecuteNonQuery()
+            conexion.Close()
+            If (i > 0) Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MessageBox.Show("no se lleno por: " + ex.ToString)
+
+        End Try
+
+    End Function
 End Module

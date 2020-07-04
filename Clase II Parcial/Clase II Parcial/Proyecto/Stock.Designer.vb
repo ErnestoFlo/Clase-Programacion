@@ -53,7 +53,7 @@ Partial Class Stock
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1101, 266)
+        Me.GroupBox1.Size = New System.Drawing.Size(869, 266)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Telefonos Registrados"
@@ -114,7 +114,7 @@ Partial Class Stock
         Me.DGstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGstock.Location = New System.Drawing.Point(6, 27)
         Me.DGstock.Name = "DGstock"
-        Me.DGstock.Size = New System.Drawing.Size(1079, 225)
+        Me.DGstock.Size = New System.Drawing.Size(852, 225)
         Me.DGstock.TabIndex = 1
         '
         'GroupBox2
@@ -210,7 +210,7 @@ Partial Class Stock
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1125, 440)
+        Me.ClientSize = New System.Drawing.Size(905, 440)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
