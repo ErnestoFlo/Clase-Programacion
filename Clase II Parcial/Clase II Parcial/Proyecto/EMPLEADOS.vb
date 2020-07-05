@@ -7,7 +7,18 @@ Public Class EMPLEADOS
     Dim Identidad As String
     Dim index As Integer
 
-
+    Private Sub limpiar()
+        prueba2.Clear()
+        txtIdentidad.Clear()
+        cmbDepto.SelectedIndex = -1
+        cmbmunicipio.SelectedIndex = -1
+        txtBarrio.Clear()
+        cmbPuesto.SelectedIndex = -1
+        txtNombre.Clear()
+        txtEdad.Clear()
+        txtPrueba.Clear()
+        conexion.conexion.Close()
+    End Sub
 
     Private Sub cmbDepto_LostFocus(sender As Object, e As EventArgs) Handles cmbDepto.LostFocus
         Dim Departamento As Integer
@@ -425,18 +436,8 @@ Public Class EMPLEADOS
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        txtIdentidad.Clear()
-        cmbDepto.ResetText()
-        cmbmunicipio.ResetText()
-        txtBarrio.Clear()
-        cmbPuesto.ResetText()
-        txtNombre.Clear()
-        txtEdad.Clear()
-        txtPrueba.Clear()
-        conexion.conexion.Close()
-
-
-
+        limpiar()
+        prueba2.Enabled = True
     End Sub
 
     Private Sub EMPLEADOS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -444,6 +445,11 @@ Public Class EMPLEADOS
         mostrarDatos()
         abrirConexion()
         llenarDataGridEmpleados(DGListado)
+
+        btnEliminar.Enabled = False
+        btnEditar.Enabled = False
+
+
     End Sub
 
     Private Sub mostrarDatos()
@@ -454,25 +460,41 @@ Public Class EMPLEADOS
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Try
-
             direccion = cmbDepto.Text & ", " & cmbmunicipio.Text & ", " & txtBarrio.Text
+            If txtIdentidad.Text.Length <> 15 Then
+                MessageBox.Show("La identidad esta incompleta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            If cmbmunicipio.SelectedIndex = -1 Or cmbDepto.SelectedIndex = -1 Or cmbPuesto.SelectedIndex = -1 Or cmbSexo.SelectedIndex = -1 Then
+                MessageBox.Show("Debe llenar todos los campos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            If prueba2.Text = "" Or txtNombre.Text = "" Or txtPrueba.Text = "" Or txtBarrio.Text = "" Or txtEdad.Text = "" Then
+                MessageBox.Show("Debe llenar todos los campos requeridos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
 
             index = Val(cmbPuesto.SelectedIndex)
             Identidad = txtIdentidad.Text
 
-            If (conexion.validarEmpleados(prueba2.Text) = False) Then
-                Dim agregar As String = "insert into Center.empleados values(" + prueba2.Text + ",'" + Identidad + "','" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
-                If (conexion.Insertar(agregar)) Then
-                    MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    mostrarDatos()
-                Else
-                    MessageBox.Show("Error al agregar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
-            Else
-                MsgBox("Este empleado ya existe", vbObjectError)
-                conexion.conexion.Close()
 
-            End If
+            If (conexion.validarEmpleados(prueba2.Text) = False) Then
+                    Dim agregar As String = "insert into Center.empleados values(" + prueba2.Text + ",'" + Identidad + "','" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
+                    If (conexion.Insertar(agregar)) Then
+                        MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    mostrarDatos()
+                    limpiar()
+
+                Else
+                        MessageBox.Show("Error al agregar el Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Else
+                    MsgBox("Este empleado ya existe", vbObjectError)
+                    conexion.conexion.Close()
+
+                End If
 
 
 
@@ -532,8 +554,16 @@ Public Class EMPLEADOS
             cmbPuesto.Text = dgempleados.Cells(6).Value.ToString()
             txtPrueba.Text = dgempleados.Cells(7).Value.ToString()
 
+            cmbDepto.SelectedIndex = -1
+            cmbmunicipio.SelectedIndex = -1
+
             cmbDepto.Enabled = False
             cmbmunicipio.Enabled = False
+            prueba2.Enabled = False
+
+            btnEliminar.Enabled = True
+            btnEditar.Enabled = True
+
         Catch ex As Exception
             MessageBox.Show("no se lleno por: " + ex.ToString)
         End Try

@@ -49,7 +49,6 @@ Module conexion
         Try
             cn = New SqlConnection("Data Source=DESKTOP-L87VDHJ;Initial Catalog=CompuCenter;Integrated Security=True")
             cn.Open()
-            MessageBox.Show("CONECTADO")
         Catch ex As Exception
             MessageBox.Show("Nose pudo abrir" + ex.ToString)
             cn.Close()

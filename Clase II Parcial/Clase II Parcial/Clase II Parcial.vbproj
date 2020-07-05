@@ -140,6 +140,7 @@
     <Compile Include="Proyecto\PantallaDeCarga.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="query.vb" />
     <Compile Include="Tareas\EntregaBolsaSolidaria.Designer.vb">
       <DependentUpon>EntregaBolsaSolidaria.vb</DependentUpon>
     </Compile>

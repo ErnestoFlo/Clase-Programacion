@@ -10,11 +10,7 @@ Public Class Stock
             conexion.Open()
             comando = New SqlCommand("Select count(*) as paquete1 from Center.stock where puesto='Gerente'")
 
-            dr = comando.ExecuteReader
 
-            If (dr.Read()) Then
-                txtPack1.Text = dr("paquete1").ToString()
-            End If
 
             'Dim mostrar As String = "select st.IdCodigo, st.identidad , st.nombre, st.puesto, te.modelo,te.tipoPaquete,te.Descripcion, te.cantidad from Center.stock st inner join Center.telefonos te on st.idPuesto = te.id"
 

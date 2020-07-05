@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainPage
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,13 @@ Partial Class MainPage
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.panelCentral = New System.Windows.Forms.Panel()
+        Me.btnRestaurar = New System.Windows.Forms.Button()
+        Me.btnMinimizar = New System.Windows.Forms.Button()
+        Me.btnMaximizar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
@@ -34,10 +37,7 @@ Partial Class MainPage
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnAsignacionTelefonos = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnRestaurar = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnMaximizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.panelCentral = New System.Windows.Forms.Panel()
         Me.PanelSuperior.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,15 +56,65 @@ Partial Class MainPage
         Me.PanelSuperior.Size = New System.Drawing.Size(1223, 32)
         Me.PanelSuperior.TabIndex = 1
         '
-        'panelCentral
+        'btnRestaurar
         '
-        Me.panelCentral.BackColor = System.Drawing.SystemColors.Window
-        Me.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelCentral.Location = New System.Drawing.Point(180, 32)
-        Me.panelCentral.Name = "panelCentral"
-        Me.panelCentral.Size = New System.Drawing.Size(1043, 454)
-        Me.panelCentral.TabIndex = 9
+        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRestaurar.FlatAppearance.BorderSize = 0
+        Me.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestaurar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Restaurar
+        Me.btnRestaurar.Location = New System.Drawing.Point(1157, 0)
+        Me.btnRestaurar.Name = "btnRestaurar"
+        Me.btnRestaurar.Size = New System.Drawing.Size(30, 33)
+        Me.btnRestaurar.TabIndex = 2
+        Me.btnRestaurar.UseVisualStyleBackColor = True
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimizar.FlatAppearance.BorderSize = 0
+        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Minimizar
+        Me.btnMinimizar.Location = New System.Drawing.Point(1121, 0)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(30, 33)
+        Me.btnMinimizar.TabIndex = 2
+        Me.btnMinimizar.UseVisualStyleBackColor = True
+        '
+        'btnMaximizar
+        '
+        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMaximizar.FlatAppearance.BorderSize = 0
+        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMaximizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Maximizar
+        Me.btnMaximizar.Location = New System.Drawing.Point(1157, 0)
+        Me.btnMaximizar.Name = "btnMaximizar"
+        Me.btnMaximizar.Size = New System.Drawing.Size(30, 33)
+        Me.btnMaximizar.TabIndex = 1
+        Me.btnMaximizar.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_cerrar_FN
+        Me.btnCerrar.Location = New System.Drawing.Point(1193, 0)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(30, 33)
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -201,65 +251,15 @@ Partial Class MainPage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'btnRestaurar
+        'panelCentral
         '
-        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRestaurar.FlatAppearance.BorderSize = 0
-        Me.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestaurar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Restaurar
-        Me.btnRestaurar.Location = New System.Drawing.Point(1157, 0)
-        Me.btnRestaurar.Name = "btnRestaurar"
-        Me.btnRestaurar.Size = New System.Drawing.Size(30, 33)
-        Me.btnRestaurar.TabIndex = 2
-        Me.btnRestaurar.UseVisualStyleBackColor = True
-        '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Minimizar
-        Me.btnMinimizar.Location = New System.Drawing.Point(1121, 0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(30, 33)
-        Me.btnMinimizar.TabIndex = 2
-        Me.btnMinimizar.UseVisualStyleBackColor = True
-        '
-        'btnMaximizar
-        '
-        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMaximizar.FlatAppearance.BorderSize = 0
-        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaximizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Maximizar
-        Me.btnMaximizar.Location = New System.Drawing.Point(1157, 0)
-        Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(30, 33)
-        Me.btnMaximizar.TabIndex = 1
-        Me.btnMaximizar.UseVisualStyleBackColor = True
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_cerrar_FN
-        Me.btnCerrar.Location = New System.Drawing.Point(1193, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(30, 33)
-        Me.btnCerrar.TabIndex = 0
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.panelCentral.BackColor = System.Drawing.SystemColors.Window
+        Me.panelCentral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelCentral.Location = New System.Drawing.Point(180, 32)
+        Me.panelCentral.Name = "panelCentral"
+        Me.panelCentral.Size = New System.Drawing.Size(1043, 454)
+        Me.panelCentral.TabIndex = 9
         '
         'MainPage
         '
