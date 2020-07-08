@@ -63,6 +63,16 @@ Namespace My
                 Return CType(Me("CompuCenterConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-L87VDHJ;Initial Catalog=Tienda;Integrated Security=True")>  _
+        Public ReadOnly Property TiendaConnectionString() As String
+            Get
+                Return CType(Me("TiendaConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

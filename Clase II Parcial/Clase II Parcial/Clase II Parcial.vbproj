@@ -92,6 +92,15 @@
     </Compile>
     <Compile Include="conexion.vb" />
     <Compile Include="ConexionCrud.vb" />
+    <Compile Include="EXAMEN\conexionExamen.vb" />
+    <Compile Include="EXAMEN\CRUDexamen.vb" />
+    <Compile Include="EXAMEN\Examen-II-Parcial.Designer.vb">
+      <DependentUpon>Examen-II-Parcial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EXAMEN\Examen-II-Parcial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXAMEN\queryExamen.vb" />
     <Compile Include="Proyecto\EMPLEADOS.Designer.vb">
       <DependentUpon>EMPLEADOS.vb</DependentUpon>
     </Compile>
@@ -140,7 +149,6 @@
     <Compile Include="Proyecto\PantallaDeCarga.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="query.vb" />
     <Compile Include="Tareas\EntregaBolsaSolidaria.Designer.vb">
       <DependentUpon>EntregaBolsaSolidaria.vb</DependentUpon>
     </Compile>
@@ -169,6 +177,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TiendaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Clase\Arreglos.resx">
@@ -176,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clase\LibretaDeAhorro.resx">
       <DependentUpon>LibretaDeAhorro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXAMEN\Examen-II-Parcial.resx">
+      <DependentUpon>Examen-II-Parcial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proyecto\EMPLEADOS.resx">
       <DependentUpon>EMPLEADOS.vb</DependentUpon>
@@ -236,6 +252,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="TiendaDataSet.xsc">
+      <DependentUpon>TiendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TiendaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TiendaDataSet.xss">
+      <DependentUpon>TiendaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icono cerrar FN.png" />
