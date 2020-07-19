@@ -100,7 +100,6 @@
     <Compile Include="EXAMEN\Examen-II-Parcial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EXAMEN\queryExamen.vb" />
     <Compile Include="Proyecto\EMPLEADOS.Designer.vb">
       <DependentUpon>EMPLEADOS.vb</DependentUpon>
     </Compile>
