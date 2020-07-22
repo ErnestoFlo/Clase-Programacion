@@ -1,5 +1,23 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class Main
+    Private Sub AbrirFormulario(frmHijo As Object)
+        Try
+            If (panelCentral.Controls.Count > 0) Then
+                panelCentral.Controls.RemoveAt(0)
+            Else
+                Dim frm As Form
+                frm = frmHijo
+                frm.TopLevel = False
+                frm.Dock = DockStyle.Fill
+                panelCentral.Controls.Add(frm)
+                panelCentral.Tag = frm
+                frm.Show()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -41,10 +59,38 @@ Public Class Main
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AbrirFormulario(New Libros)
+    End Sub
+
+    Private Sub panelCentral_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
-    Private Sub panelCentral_Paint(sender As Object, e As PaintEventArgs) Handles panelCentral.Paint
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        AbrirFormulario(New Prestatarios)
+    End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        AbrirFormulario(New LibrosPrestados)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        AbrirFormulario(New Retornos)
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        AbrirFormulario(New Vencidos)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        AbrirFormulario(New Categorias)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        AbrirFormulario(New Estudiantes)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        AbrirFormulario(New Reporte)
     End Sub
 End Class
