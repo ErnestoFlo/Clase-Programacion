@@ -28,6 +28,11 @@ Partial Class MainPage
         Me.btnMaximizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -35,7 +40,6 @@ Partial Class MainPage
         Me.btnStock = New System.Windows.Forms.Button()
         Me.btnEmpleados = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btnAsignacionTelefonos = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelCentral = New System.Windows.Forms.Panel()
         Me.PanelSuperior.SuspendLayout()
@@ -53,7 +57,7 @@ Partial Class MainPage
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
         Me.PanelSuperior.Name = "PanelSuperior"
-        Me.PanelSuperior.Size = New System.Drawing.Size(1223, 32)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1252, 32)
         Me.PanelSuperior.TabIndex = 1
         '
         'btnRestaurar
@@ -64,8 +68,7 @@ Partial Class MainPage
         Me.btnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestaurar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Restaurar
-        Me.btnRestaurar.Location = New System.Drawing.Point(1157, 0)
+        Me.btnRestaurar.Location = New System.Drawing.Point(1186, 0)
         Me.btnRestaurar.Name = "btnRestaurar"
         Me.btnRestaurar.Size = New System.Drawing.Size(30, 33)
         Me.btnRestaurar.TabIndex = 2
@@ -79,8 +82,7 @@ Partial Class MainPage
         Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Minimizar
-        Me.btnMinimizar.Location = New System.Drawing.Point(1121, 0)
+        Me.btnMinimizar.Location = New System.Drawing.Point(1150, 0)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(30, 33)
         Me.btnMinimizar.TabIndex = 2
@@ -94,8 +96,7 @@ Partial Class MainPage
         Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaximizar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_Maximizar
-        Me.btnMaximizar.Location = New System.Drawing.Point(1157, 0)
+        Me.btnMaximizar.Location = New System.Drawing.Point(1186, 0)
         Me.btnMaximizar.Name = "btnMaximizar"
         Me.btnMaximizar.Size = New System.Drawing.Size(30, 33)
         Me.btnMaximizar.TabIndex = 1
@@ -109,8 +110,7 @@ Partial Class MainPage
         Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Clase_II_Parcial.My.Resources.Resources.Icono_cerrar_FN
-        Me.btnCerrar.Location = New System.Drawing.Point(1193, 0)
+        Me.btnCerrar.Location = New System.Drawing.Point(1222, 0)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(30, 33)
         Me.btnCerrar.TabIndex = 0
@@ -119,9 +119,13 @@ Partial Class MainPage
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.BackgroundImage = Global.Clase_II_Parcial.My.Resources.Resources.depositphotos_198606870_stock_video_multicolored_motion_gradient_background1
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Panel7)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Panel6)
         Me.Panel1.Controls.Add(Me.btnSalir)
         Me.Panel1.Controls.Add(Me.Panel5)
@@ -129,18 +133,84 @@ Partial Class MainPage
         Me.Panel1.Controls.Add(Me.btnStock)
         Me.Panel1.Controls.Add(Me.btnEmpleados)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.btnAsignacionTelefonos)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 32)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(180, 454)
+        Me.Panel1.Size = New System.Drawing.Size(180, 486)
         Me.Panel1.TabIndex = 2
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.SystemColors.Desktop
+        Me.Panel7.Location = New System.Drawing.Point(3, 332)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(18, 42)
+        Me.Panel7.TabIndex = 11
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.Desktop
+        Me.Panel2.Location = New System.Drawing.Point(3, 284)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(18, 42)
+        Me.Panel2.TabIndex = 14
+        '
+        'Button3
+        '
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(27, 284)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(152, 42)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Ventas"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(27, 236)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(152, 42)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Compras"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(27, 188)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(152, 42)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Productos"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.Desktop
-        Me.Panel6.Location = New System.Drawing.Point(3, 284)
+        Me.Panel6.Location = New System.Drawing.Point(3, 420)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(18, 42)
         Me.Panel6.TabIndex = 10
@@ -153,9 +223,8 @@ Partial Class MainPage
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.btnSalir.Image = Global.Clase_II_Parcial.My.Resources.Resources._exit
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(27, 284)
+        Me.btnSalir.Location = New System.Drawing.Point(27, 420)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(152, 42)
         Me.btnSalir.TabIndex = 9
@@ -187,13 +256,12 @@ Partial Class MainPage
         Me.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnStock.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStock.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.btnStock.Image = Global.Clase_II_Parcial.My.Resources.Resources.pallet__1_
         Me.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnStock.Location = New System.Drawing.Point(27, 236)
+        Me.btnStock.Location = New System.Drawing.Point(27, 332)
         Me.btnStock.Name = "btnStock"
         Me.btnStock.Size = New System.Drawing.Size(152, 42)
         Me.btnStock.TabIndex = 6
-        Me.btnStock.Text = "Stock"
+        Me.btnStock.Text = "Usuarios"
         Me.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnStock.UseVisualStyleBackColor = True
         '
@@ -205,9 +273,8 @@ Partial Class MainPage
         Me.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEmpleados.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEmpleados.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.btnEmpleados.Image = Global.Clase_II_Parcial.My.Resources.Resources.employee__1_
         Me.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEmpleados.Location = New System.Drawing.Point(27, 188)
+        Me.btnEmpleados.Location = New System.Drawing.Point(27, 140)
         Me.btnEmpleados.Name = "btnEmpleados"
         Me.btnEmpleados.Size = New System.Drawing.Size(152, 42)
         Me.btnEmpleados.TabIndex = 6
@@ -223,27 +290,9 @@ Partial Class MainPage
         Me.Panel3.Size = New System.Drawing.Size(18, 42)
         Me.Panel3.TabIndex = 6
         '
-        'btnAsignacionTelefonos
-        '
-        Me.btnAsignacionTelefonos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAsignacionTelefonos.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAsignacionTelefonos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
-        Me.btnAsignacionTelefonos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAsignacionTelefonos.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAsignacionTelefonos.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.btnAsignacionTelefonos.Image = Global.Clase_II_Parcial.My.Resources.Resources.telephone__1_
-        Me.btnAsignacionTelefonos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAsignacionTelefonos.Location = New System.Drawing.Point(27, 140)
-        Me.btnAsignacionTelefonos.Name = "btnAsignacionTelefonos"
-        Me.btnAsignacionTelefonos.Size = New System.Drawing.Size(152, 42)
-        Me.btnAsignacionTelefonos.TabIndex = 5
-        Me.btnAsignacionTelefonos.Text = "Telefonos"
-        Me.btnAsignacionTelefonos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAsignacionTelefonos.UseVisualStyleBackColor = True
-        '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Clase_II_Parcial.My.Resources.Resources.LOGO_EMPRESA_FINAL1
+        Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(42, 14)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(102, 107)
@@ -258,14 +307,14 @@ Partial Class MainPage
         Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelCentral.Location = New System.Drawing.Point(180, 32)
         Me.panelCentral.Name = "panelCentral"
-        Me.panelCentral.Size = New System.Drawing.Size(1043, 454)
-        Me.panelCentral.TabIndex = 9
+        Me.panelCentral.Size = New System.Drawing.Size(1072, 486)
+        Me.panelCentral.TabIndex = 13
         '
         'MainPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1223, 486)
+        Me.ClientSize = New System.Drawing.Size(1252, 518)
         Me.Controls.Add(Me.panelCentral)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelSuperior)
@@ -288,12 +337,16 @@ Partial Class MainPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnAsignacionTelefonos As Button
     Friend WithEvents btnStock As Button
     Friend WithEvents btnEmpleados As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents panelCentral As Panel
 End Class

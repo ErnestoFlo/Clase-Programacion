@@ -60,7 +60,7 @@ Public Class MainPage
         End If
     End Sub
 
-    Private Sub btnAsignacionTelefonos_Click(sender As Object, e As EventArgs) Handles btnAsignacionTelefonos.Click
+    Private Sub btnAsignacionTelefonos_Click(sender As Object, e As EventArgs)
         AbrirFormulario(New Telefono)
     End Sub
 
@@ -73,7 +73,7 @@ Public Class MainPage
     End Sub
 
     Private Sub btnStock_Click(sender As Object, e As EventArgs) Handles btnStock.Click
-        AbrirFormulario(New Stock)
+        AbrirFormulario(New UsuarioAdministracion)
     End Sub
 
     Private Sub PanelSuperior_Paint(sender As Object, e As PaintEventArgs) Handles PanelSuperior.Paint
@@ -88,6 +88,17 @@ Public Class MainPage
         MessageBox.Show("CONECTADO")
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        AbrirFormulario(New Productos)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AbrirFormulario(New Compras)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        AbrirFormulario(New Ventas)
+    End Sub
 End Class
 
 
