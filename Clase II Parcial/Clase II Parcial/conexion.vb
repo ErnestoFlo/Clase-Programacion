@@ -1,15 +1,17 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
 
-Module conexion
+Public Class conexion
+
+
     Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-LGDBE5Q\SQLEXPRESS;Initial Catalog=CompuCenter;Integrated Security=True")
     Public ds As DataSet = New DataSet()
     Public da As SqlDataAdapter
-        Public lectura As SqlDataReader
-        Public comando As SqlCommand
-        Public cmd As New SqlCommand
+    Public lectura As SqlDataReader
+    Public comando As SqlCommand
+    Public cmd As New SqlCommand
 
-        Public Sub conectar()
+    Public Sub conectar()
         Try
 
             conexion.Open()
@@ -18,10 +20,23 @@ Module conexion
             MessageBox.Show("No se ha podido acceder a la base de datos")
         Finally
             conexion.Close()
-            End Try
-        End Sub
+        End Try
+    End Sub
 
+    'Public Sub consulta(ByVal sql As String, ByVal tabla As String)
+    '    Try
+    '        conexion.Open()
+    '        ds.Tables.Clear()
+    '        da = New SqlDataAdapter(sql, conexion)
+    '        comando = New SqlCommandBuilder(da)
 
+    '        da.Fill(ds, tabla)
+
+    '    Catch ex As Exception
+    '        conexion.Close()
+    '    End Try
+    '    conexion.Close()
+    'End Sub
 
 
 
@@ -69,15 +84,7 @@ Module conexion
         End Try
     End Sub
 
-    Sub abrirConexion()
-        Try
-            cn = New SqlConnection("Data Source=DESKTOP-L87VDHJ;Initial Catalog=CompuCenter;Integrated Security=True")
-            cn.Open()
-        Catch ex As Exception
-            MessageBox.Show("Nose pudo abrir" + ex.ToString)
-            cn.Close()
-        End Try
-    End Sub
+
 
     Function validarEmpleados(ByVal codigo As String) As Boolean
         Dim respuesta As Boolean = False
@@ -144,4 +151,5 @@ Module conexion
         End Try
 
     End Function
-End Module
+
+End Class

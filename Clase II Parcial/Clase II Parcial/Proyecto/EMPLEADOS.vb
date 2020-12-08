@@ -1,11 +1,13 @@
 ﻿Imports System.Data.SqlClient
 Public Class EMPLEADOS
+    Dim conexion As conexion = New conexion()
 
-    Dim conexion As ConexionCrud = New ConexionCrud
     Dim dt As New DataTable
     Dim direccion As String
     Dim Identidad As String
     Dim index As Integer
+    Dim DataT As New DataTable
+
 
     Private Sub limpiar()
         prueba2.Clear()
@@ -440,25 +442,9 @@ Public Class EMPLEADOS
         prueba2.Enabled = True
     End Sub
 
-    Private Sub EMPLEADOS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        conexion.conectar()
-
-        'conexion.conectar()
-        'mostrarDatos()
-        'abrirConexion()
-        'llenarDataGridEmpleados(DGListado)
-
-        'btnEliminar.Enabled = False
-        'btnEditar.Enabled = False
 
 
-    End Sub
 
-    Private Sub mostrarDatos()
-        conexion.Consulta("select * from Center.empleados", "Center.empleados")
-        DGListado.DataSource = conexion.ds.Tables("Center.empleados")
-    End Sub
 
 
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -487,7 +473,7 @@ Public Class EMPLEADOS
                     Dim agregar As String = "insert into Center.empleados values(" + prueba2.Text + ",'" + Identidad + "','" + txtNombre.Text + "','" + direccion + "','" + txtEdad.Text + "','" + cmbSexo.Text + "','" + cmbPuesto.Text + "', '" + txtPrueba.Text + "')"
                     If (conexion.Insertar(agregar)) Then
                         MessageBox.Show("Empleado agregado correctamente!!!", "Ingreso de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    mostrarDatos()
+
                     limpiar()
 
                 Else
@@ -534,7 +520,7 @@ Public Class EMPLEADOS
            "identidad='" + txtIdentidad.Text + "', nombre='" + txtNombre.Text + "', direccion='" + txtBarrio.Text + "', edad='" + txtEdad.Text + "',sexo='" + cmbSexo.Text + "',puesto='" + cmbPuesto.Text + "',idPuesto='" + txtPrueba.Text + "'"
             If (conexion.modificar("Center.empleados", modificar, " IdCodigo=" + prueba2.Text)) Then
                 MessageBox.Show("Actualizado")
-                mostrarDatos()
+
                 conexion.conexion.Close()
             Else
                 MessageBox.Show("Error al actualizar")
@@ -547,6 +533,7 @@ Public Class EMPLEADOS
 
     Private Sub DGListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGListado.CellContentClick
         Try
+
             Dim dgempleados As DataGridViewRow = DGListado.Rows(e.RowIndex)
             prueba2.Text = dgempleados.Cells(0).Value.ToString()
             txtIdentidad.Text = dgempleados.Cells(1).Value.ToString()
@@ -573,11 +560,28 @@ Public Class EMPLEADOS
 
     End Sub
 
+
+    Private Sub consultarPresidente()
+        Try
+            DataT = conexion.llenarDataGridEmpleado()
+            If DataT.Rows.Count <> 0 Then
+                DGListado.DataSource = DataT
+                DGListado.DataSource = DataT
+            Else
+                DGListado.DataSource = Nothing
+                MessageBox.Show("Error al consultar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
             If (conexion.eliminar("Center.empleados", "IdCodigo = " + prueba2.Text)) Then
                 MessageBox.Show("Registro eliminado correctamente")
-                mostrarDatos()
+
             Else
                 MessageBox.Show("error al eliminar")
 
@@ -770,6 +774,10 @@ Public Class EMPLEADOS
     End Sub
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub EMPLEADOS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
