@@ -62,7 +62,7 @@ Partial Class EMPLEADOS
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DGListado)
-        Me.GroupBox2.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox2.Location = New System.Drawing.Point(357, 20)
         Me.GroupBox2.Name = "GroupBox2"
@@ -107,7 +107,7 @@ Partial Class EMPLEADOS
         Me.GroupBox1.Controls.Add(Me.txtId)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.btnEliminar)
-        Me.GroupBox1.Font = New System.Drawing.Font("Bebas Neue", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -121,7 +121,7 @@ Partial Class EMPLEADOS
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(19, 31)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 21)
+        Me.Label7.Size = New System.Drawing.Size(59, 20)
         Me.Label7.TabIndex = 43
         Me.Label7.Text = "Codigo"
         '
@@ -129,7 +129,7 @@ Partial Class EMPLEADOS
         '
         Me.prueba2.Location = New System.Drawing.Point(101, 24)
         Me.prueba2.Name = "prueba2"
-        Me.prueba2.Size = New System.Drawing.Size(121, 28)
+        Me.prueba2.Size = New System.Drawing.Size(121, 26)
         Me.prueba2.TabIndex = 4
         '
         'Label2
@@ -137,7 +137,7 @@ Partial Class EMPLEADOS
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(19, 388)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 21)
+        Me.Label2.Size = New System.Drawing.Size(79, 20)
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "ID puesto"
         '
@@ -148,7 +148,7 @@ Partial Class EMPLEADOS
         Me.cmbSexo.Items.AddRange(New Object() {"Femenino", "Masculino"})
         Me.cmbSexo.Location = New System.Drawing.Point(101, 311)
         Me.cmbSexo.Name = "cmbSexo"
-        Me.cmbSexo.Size = New System.Drawing.Size(100, 29)
+        Me.cmbSexo.Size = New System.Drawing.Size(100, 28)
         Me.cmbSexo.TabIndex = 41
         '
         'txtPrueba
@@ -156,7 +156,7 @@ Partial Class EMPLEADOS
         Me.txtPrueba.Enabled = False
         Me.txtPrueba.Location = New System.Drawing.Point(101, 381)
         Me.txtPrueba.Name = "txtPrueba"
-        Me.txtPrueba.Size = New System.Drawing.Size(121, 28)
+        Me.txtPrueba.Size = New System.Drawing.Size(121, 26)
         Me.txtPrueba.TabIndex = 24
         '
         'Label1
@@ -164,7 +164,7 @@ Partial Class EMPLEADOS
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(19, 284)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 21)
+        Me.Label1.Size = New System.Drawing.Size(47, 20)
         Me.Label1.TabIndex = 40
         Me.Label1.Text = "Edad"
         '
@@ -173,7 +173,7 @@ Partial Class EMPLEADOS
         Me.txtEdad.Location = New System.Drawing.Point(101, 277)
         Me.txtEdad.Mask = "99"
         Me.txtEdad.Name = "txtEdad"
-        Me.txtEdad.Size = New System.Drawing.Size(42, 28)
+        Me.txtEdad.Size = New System.Drawing.Size(42, 26)
         Me.txtEdad.TabIndex = 39
         Me.txtEdad.ValidatingType = GetType(Integer)
         '
@@ -216,7 +216,7 @@ Partial Class EMPLEADOS
         Me.cmbmunicipio.FormattingEnabled = True
         Me.cmbmunicipio.Location = New System.Drawing.Point(101, 161)
         Me.cmbmunicipio.Name = "cmbmunicipio"
-        Me.cmbmunicipio.Size = New System.Drawing.Size(121, 29)
+        Me.cmbmunicipio.Size = New System.Drawing.Size(121, 28)
         Me.cmbmunicipio.TabIndex = 35
         '
         'Label9
@@ -224,7 +224,7 @@ Partial Class EMPLEADOS
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(19, 169)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 21)
+        Me.Label9.Size = New System.Drawing.Size(75, 20)
         Me.Label9.TabIndex = 34
         Me.Label9.Text = "Municipio"
         '
@@ -235,7 +235,7 @@ Partial Class EMPLEADOS
         Me.cmbDepto.Items.AddRange(New Object() {"Atlantida", "Colón", "Comayagua", "Copán ", "Cortés", "Choluteca", "El Paraiso", "Francisco Morazan", "Gracias aDios", "Intibuca", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho ", "Santa Bárbara", "Valle", "Yoro"})
         Me.cmbDepto.Location = New System.Drawing.Point(101, 126)
         Me.cmbDepto.Name = "cmbDepto"
-        Me.cmbDepto.Size = New System.Drawing.Size(100, 29)
+        Me.cmbDepto.Size = New System.Drawing.Size(100, 28)
         Me.cmbDepto.TabIndex = 33
         '
         'Label8
@@ -243,7 +243,7 @@ Partial Class EMPLEADOS
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(19, 133)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(85, 21)
+        Me.Label8.Size = New System.Drawing.Size(112, 20)
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Departamento"
         '
@@ -252,7 +252,7 @@ Partial Class EMPLEADOS
         Me.txtIdentidad.Location = New System.Drawing.Point(101, 58)
         Me.txtIdentidad.Mask = "9999-9999-99999"
         Me.txtIdentidad.Name = "txtIdentidad"
-        Me.txtIdentidad.Size = New System.Drawing.Size(100, 28)
+        Me.txtIdentidad.Size = New System.Drawing.Size(100, 26)
         Me.txtIdentidad.TabIndex = 15
         '
         'cmbPuesto
@@ -262,7 +262,7 @@ Partial Class EMPLEADOS
         Me.cmbPuesto.Items.AddRange(New Object() {"Gerente", "Jefe de calidad ", "Jefe de TI (Infraestructura)", "Jefe de TI (Desarrollo)", "Soporte TI", "Medios", "Marketing", "Jefe RRHH", "Ejecutivos de RRHH", "Dependiente", "Cocinero", "Tecnicos de mantenimiento", "Desarrollador", "Operador", "Chofer", "Programador"})
         Me.cmbPuesto.Location = New System.Drawing.Point(101, 346)
         Me.cmbPuesto.Name = "cmbPuesto"
-        Me.cmbPuesto.Size = New System.Drawing.Size(121, 29)
+        Me.cmbPuesto.Size = New System.Drawing.Size(121, 28)
         Me.cmbPuesto.TabIndex = 28
         '
         'Label6
@@ -270,7 +270,7 @@ Partial Class EMPLEADOS
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(19, 319)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(38, 21)
+        Me.Label6.Size = New System.Drawing.Size(49, 20)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "Sexo:"
         '
@@ -279,7 +279,7 @@ Partial Class EMPLEADOS
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(19, 354)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(46, 21)
+        Me.Label5.Size = New System.Drawing.Size(59, 20)
         Me.Label5.TabIndex = 26
         Me.Label5.Text = "Puesto"
         '
@@ -296,7 +296,7 @@ Partial Class EMPLEADOS
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(19, 219)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 21)
+        Me.Label4.Size = New System.Drawing.Size(75, 20)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Direccion"
         '
@@ -304,7 +304,7 @@ Partial Class EMPLEADOS
         '
         Me.txtNombre.Location = New System.Drawing.Point(101, 92)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(151, 28)
+        Me.txtNombre.Size = New System.Drawing.Size(151, 26)
         Me.txtNombre.TabIndex = 23
         '
         'Label3
@@ -312,7 +312,7 @@ Partial Class EMPLEADOS
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(19, 99)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(50, 21)
+        Me.Label3.Size = New System.Drawing.Size(65, 20)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Nombre"
         '
@@ -321,7 +321,7 @@ Partial Class EMPLEADOS
         Me.txtId.AutoSize = True
         Me.txtId.Location = New System.Drawing.Point(19, 65)
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(62, 21)
+        Me.txtId.Size = New System.Drawing.Size(76, 20)
         Me.txtId.TabIndex = 21
         Me.txtId.Text = "Identidad"
         '

@@ -162,7 +162,7 @@ Partial Class MainPage
         Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button3.Location = New System.Drawing.Point(27, 284)
@@ -179,7 +179,7 @@ Partial Class MainPage
         Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(27, 236)
@@ -196,7 +196,7 @@ Partial Class MainPage
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(27, 188)
@@ -221,7 +221,7 @@ Partial Class MainPage
         Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.Desktop
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalir.Location = New System.Drawing.Point(27, 420)
@@ -254,7 +254,7 @@ Partial Class MainPage
         Me.btnStock.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
         Me.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnStock.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStock.ForeColor = System.Drawing.SystemColors.Desktop
         Me.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnStock.Location = New System.Drawing.Point(27, 332)
@@ -271,7 +271,7 @@ Partial Class MainPage
         Me.btnEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite
         Me.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmpleados.Font = New System.Drawing.Font("Bebas Neue", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEmpleados.ForeColor = System.Drawing.SystemColors.Desktop
         Me.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEmpleados.Location = New System.Drawing.Point(27, 140)
@@ -308,7 +308,7 @@ Partial Class MainPage
         Me.panelCentral.Location = New System.Drawing.Point(180, 32)
         Me.panelCentral.Name = "panelCentral"
         Me.panelCentral.Size = New System.Drawing.Size(1072, 486)
-        Me.panelCentral.TabIndex = 13
+        Me.panelCentral.TabIndex = 14
         '
         'MainPage
         '

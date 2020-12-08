@@ -89,15 +89,23 @@ Public Class MainPage
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        AbrirFormulario(New Productos)
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        AbrirFormulario(New Compras)
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        AbrirFormulario(New Ventas)
+
+    End Sub
+
+    Private Sub panelCentral_Paint_1(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub MainPage_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        conexion.conectar()
     End Sub
 End Class
 

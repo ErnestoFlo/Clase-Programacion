@@ -441,13 +441,16 @@ Public Class EMPLEADOS
     End Sub
 
     Private Sub EMPLEADOS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conexion.conectar()
-        mostrarDatos()
-        abrirConexion()
-        llenarDataGridEmpleados(DGListado)
 
-        btnEliminar.Enabled = False
-        btnEditar.Enabled = False
+        conexion.conectar()
+
+        'conexion.conectar()
+        'mostrarDatos()
+        'abrirConexion()
+        'llenarDataGridEmpleados(DGListado)
+
+        'btnEliminar.Enabled = False
+        'btnEditar.Enabled = False
 
 
     End Sub
@@ -766,4 +769,7 @@ Public Class EMPLEADOS
         End If
     End Sub
 
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

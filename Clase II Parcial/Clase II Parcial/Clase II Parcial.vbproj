@@ -458,5 +458,8 @@
   <ItemGroup>
     <None Include="Resources\reloj-de-pared.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Proyecto\version 5.0 dela 7 y 27pm.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

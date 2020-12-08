@@ -12,8 +12,7 @@ Public Class Telefono
     Dim conexion As ConexionCrud = New ConexionCrud
 
     Private Sub Telefono_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        abrirConexion()
-        llenarDataGridTelefonos(DGtelefono)
+
     End Sub
 
     Private Sub busquedaDeDatos()

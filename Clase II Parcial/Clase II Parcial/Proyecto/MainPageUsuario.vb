@@ -1,6 +1,6 @@
 ﻿Public Class MainPageUsuario
-    Private Sub btnStock_Click(sender As Object, e As EventArgs)
-        Private Sub AbrirFormulario(frmHijo As Object)
+
+    Private Sub AbrirFormulario(frmHijo As Object)
         Try
             If (panelCentral.Controls.Count > 0) Then
                 panelCentral.Controls.RemoveAt(0)
@@ -18,9 +18,13 @@
         End Try
     End Sub
 
-    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         AbrirFormulario(New EMPLEADOS)
+    End Sub
+
+    Private Sub panelCentral_Paint(sender As Object, e As PaintEventArgs) Handles panelCentral.Paint
+
     End Sub
 End Class

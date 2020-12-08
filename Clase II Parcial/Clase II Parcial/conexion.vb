@@ -2,12 +2,36 @@
 Imports System.Data.SqlClient
 
 Module conexion
-    Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-L87VDHJ;Initial Catalog=CompuCenter;Integrated Security=True")
-    Public cn As SqlConnection
-    Public adaptador As SqlDataAdapter
-    Public dt As DataTable
-    Public comando As SqlCommand
-    Public dr As SqlDataReader
+    Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-LGDBE5Q\SQLEXPRESS;Initial Catalog=CompuCenter;Integrated Security=True")
+    Public ds As DataSet = New DataSet()
+    Public da As SqlDataAdapter
+        Public lectura As SqlDataReader
+        Public comando As SqlCommand
+        Public cmd As New SqlCommand
+
+        Public Sub conectar()
+        Try
+
+            conexion.Open()
+            MessageBox.Show("Conectado con exito")
+        Catch ex As Exception
+            MessageBox.Show("No se ha podido acceder a la base de datos")
+        Finally
+            conexion.Close()
+            End Try
+        End Sub
+
+
+
+
+
+
+
+    'Public cn As SqlConnection
+    'Public adaptador As SqlDataAdapter
+    'Public dt As DataTable
+    'Public comando As SqlCommand
+    'Public dr As SqlDataReader
 
 
     Sub llenarDataGridEmpleados(ByVal dgv As DataGridView)
